@@ -58,9 +58,14 @@
 }
 
 - (UIImage *)backButtonImage {
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"BaseBundle.bundle" ofType:nil];
+    static NSString *imagePath = nil;
+    if (imagePath != nil) {
+        return [UIImage imageWithContentsOfFile:imagePath];
+    }
+    NSBundle *mainBundle = [NSBundle bundleForClass:HHBaseViewController.class];
+    NSString *bundlePath = [mainBundle pathForResource:@"BaseBundle.bundle" ofType:nil];
     NSString *resourceName = [UIScreen mainScreen].scale == 3 ? @"nav_back_icon@3x.png" : @"nav_back_icon@2x.png";
-    NSString *imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:resourceName ofType:nil];
+    imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:resourceName ofType:nil];
     return [UIImage imageWithContentsOfFile:imagePath];
 }
 

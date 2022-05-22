@@ -28,7 +28,7 @@
         label.text = @"第一个label";
         label.textColor = UIColor.magentaColor;
         [label sizeToFit];
-        label.cent_.equalTo(self.view).offsets_(@0,@(-50),nil).on_();
+        label.cent_.equalTo(self.view).offsets_(0,-150,MEND).on_();
         weakify(self);
         [label hh_addClickAction:^(UIView * _Nonnull sender) {
             strongify(self);
@@ -60,7 +60,7 @@
     label4.backgroundColor = [UIColor greenColor];
     label4.textAlignment = NSTextAlignmentCenter;
     //label4的左边等于label3的右边同时偏移20point，宽和高等于100，centerY等于label3
-    label4.left_.widt_.heit_.centY_.equalTo(label3.righ_).offsets_(@20,@100,@100,nil).on_();
+    label4.left_.widt_.heit_.centY_.equalTo(label3.righ_).offsets_(20,100,100,MEND).on_();
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
