@@ -68,7 +68,13 @@ if ([NSThread isMainThread]) {\
     dispatch_async(dispatch_get_main_queue(), block);\
 }
 
-#define weakify(var) __weak __typeof(var) __weak__##var = var;
-#define strongify(var)  __strong typeof(var) var = __weak__##var;
+#if DEBUG
+#define hh_keywordify autoreleasepool {}
+#else
+#define hh_keywordify try {} @catch (...) {}
+#endif
+
+#define weakly(var) hh_keywordify __weak __typeof(var) __weak__##var = var;
+#define strongly(var) hh_keywordify __strong typeof(var) var = __weak__##var;
 
 NS_ASSUME_NONNULL_END

@@ -13,8 +13,6 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
     HHContentPriorityRequired,
 };
 
-#define MEND -10241024
-
 @interface UIView (HHLayout)
 
 /**
@@ -40,7 +38,7 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
 @property (nonatomic, assign, readonly) UIView *(^greatThan)(UIView *);
 @property (nonatomic, assign, readonly) UIView *(^lessThan)(UIView *);
 @property (nonatomic, assign, readonly) UIView *(^offset_)(CGFloat);
-@property (nonatomic, assign, readonly) UIView *(^offsets_)(CGFloat,...);//需要以`MEND`结尾
+@property (nonatomic, assign, readonly) UIView *(^offsets_)(NSNumber *,...);//需要以`nil`结尾
 @property (nonatomic, assign, readonly) UIView *(^on_)(void);
 @property (nonatomic, assign, readonly) UIView *(^removeAll)(void);
 

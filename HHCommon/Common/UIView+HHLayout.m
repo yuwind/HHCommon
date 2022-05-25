@@ -362,16 +362,14 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
-- (UIView *(^)(CGFloat, ...))offsets_ {
-    return ^UIView *(CGFloat first,...) {
-        [self.offsetArrayM addObject:@(first)];
-        CGFloat offset;
-        va_list arg_list;
-        va_start(arg_list, first);
-        while ((offset = va_arg(arg_list, int)) != MEND) {
-            [self.offsetArrayM addObject:@(offset)];
+- (UIView *(^)(NSNumber *, ...))offsets_ {
+    return ^UIView *(NSNumber *first,...) {
+        va_list args;
+        va_start(args, first);
+        for (NSNumber *offset = first; offset!=nil&&[offset isKindOfClass:[NSNumber class]]; offset = va_arg(args, NSNumber *)) {
+            [self.offsetArrayM addObject:offset];
         }
-        va_end(arg_list);
+        va_end(args);
         return self;
     };
 }
