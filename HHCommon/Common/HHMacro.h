@@ -41,7 +41,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define mStatusBarHeight mSystemSafeAreaInsets.top
 #define mNavigationBarAndStatusBarHeight (mNavigationBarHeight + mStatusBarHeight)
 #define mTabBarHeight 49
-#define mIndicatorHeight = mSystemSafeAreaInsets.bottom
+#define mIndicatorHeight mSystemSafeAreaInsets.bottom
 #define mTabBarAndIndicatorHeight (mTabBarHeight + mSystemSafeAreaInsets.bottom)
 
 #pragma mark - 生成颜色
