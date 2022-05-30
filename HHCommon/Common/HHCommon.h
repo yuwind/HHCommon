@@ -23,6 +23,7 @@
 #import "HHUserDefaults.h"
 #import "HHEnableInsetsLabel.h"
 #import "HHGradientLayerView.h"
+#import "HHGradientLayerButton.h"
 #import "HHCrashCaughtHandler.h"
 #import "HHDisableQuickClickButton.h"
 #import "HHBaseNavigationController.h"
