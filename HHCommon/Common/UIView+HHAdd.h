@@ -107,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param callback 回调手势对象
  @param block 手势回调事件
  */
-- (void)hh_addGestureType:(HHGestureType)type gesture:(void(^_Nullable)(UIGestureRecognizer *gesture))callback action:(void (^_Nullable)(UIGestureRecognizer *gesture))block;
+- (void)hh_addGestureType:(HHGestureType)type gesture:(void(^_Nullable)(id gesture))callback action:(void (^_Nullable)(UIGestureRecognizer *gesture))block;
 
 /**
  增加点击事件
