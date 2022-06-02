@@ -189,7 +189,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     block(textView, isOverMax);
 }
 
-- (void)hh_addGestureType:(HHGestureType)type gesture:(void (^)(UIGestureRecognizer *))callback action:(void (^)(UIGestureRecognizer *gesture))block {
+- (void)hh_addGestureType:(HHGestureType)type gesture:(void (^)(id _Nonnull))callback action:(void (^)(UIGestureRecognizer * _Nonnull))block {
     UIGestureRecognizer *gestureRec = nil;
     switch (type) {
         case HHGestureTypeTap:
