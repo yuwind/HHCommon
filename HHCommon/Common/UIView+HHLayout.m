@@ -47,6 +47,7 @@ static char * const isHeightSelfKey         = "isHeightSelfKey";
 @end
 
 static NSLayoutRelation relation_ = NSLayoutRelationEqual;
+static CGFloat multiply_ = 1.0f;
 
 @implementation UIView (HHLayout)
 
@@ -355,6 +356,13 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
+- (UIView *(^)(CGFloat))mult_ {
+    return ^UIView *(CGFloat multiply) {
+        multiply_ = multiply;
+        return self;
+    };
+}
+
 - (UIView *(^)(CGFloat))offset_ {
     return ^UIView *(CGFloat offset) {
         [self.offsetArrayM addObject:@(offset)];
@@ -520,6 +528,7 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
 }
 
 - (void)resetLayoutInitialInfo {
+    multiply_ = 1.0f;
     relation_ = NSLayoutRelationEqual;
     [self.offsetArrayM removeAllObjects];
     [self.layoutArrayM removeAllObjects];
@@ -610,7 +619,7 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
                 }
                 [self.offsetArrayM.count&&constant?self:view?commonSuperview:self removeConstraint:self.widt_cs];
             }
-            self.widt_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:1.0 constant:constant];
+            self.widt_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:multiply_ constant:constant];
             [self.offsetArrayM.count&&constant?self:view?commonSuperview:self addConstraint:self.widt_cs];
         }
             break;
@@ -625,7 +634,7 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
                 }
                 [self.offsetArrayM.count&&constant?self:view?commonSuperview:self removeConstraint:self.heit_cs];
             }
-            self.heit_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:1.0 constant:constant];
+            self.heit_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:multiply_ constant:constant];
             [self.offsetArrayM.count&&constant?self:view?commonSuperview:self addConstraint:self.heit_cs];
         }
             break;

@@ -37,6 +37,7 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
 @property (nonatomic, assign, readonly) UIView *(^equalTo)(UIView *);
 @property (nonatomic, assign, readonly) UIView *(^greatThan)(UIView *);
 @property (nonatomic, assign, readonly) UIView *(^lessThan)(UIView *);
+@property (nonatomic, assign, readonly) UIView *(^mult_)(CGFloat);//width&height
 @property (nonatomic, assign, readonly) UIView *(^offset_)(CGFloat);
 @property (nonatomic, assign, readonly) UIView *(^offsets_)(NSNumber *,...);//需要以`nil`结尾
 @property (nonatomic, assign, readonly) UIView *(^on_)(void);
