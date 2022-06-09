@@ -13,6 +13,12 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
     HHContentPriorityRequired,
 };
 
+@interface NSLayoutConstraint (HHLayout)
+
+- (void)removeConstraintFromOwner;
+
+@end
+
 @interface UIView (HHLayout)
 
 /**

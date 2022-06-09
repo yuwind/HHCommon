@@ -22,8 +22,50 @@ static char * const centerYConstraintKey    = "centerYConstraintKey";
 static char * const layoutArrayMKey         = "layoutArrayMKey";
 static char * const offsetArrayMKey         = "offsetArrayMKey";
 static char * const relativeViewKey         = "relativeViewKey";
-static char * const isWidthSelfKey          = "isWidthSelfKey";
-static char * const isHeightSelfKey         = "isHeightSelfKey";
+
+@interface HHLayoutConstraintProxy : NSObject
+
+@property (nonatomic, weak) UIView *associateView;
+
++ (instancetype)proxyWithView:(UIView *)view;
+
+@end
+
+@implementation HHLayoutConstraintProxy
+
++ (instancetype)proxyWithView:(UIView *)view {
+    HHLayoutConstraintProxy *proxy = [HHLayoutConstraintProxy new];
+    proxy.associateView = view;
+    return proxy;
+}
+
+@end
+
+
+@interface NSLayoutConstraint ()
+
+@property (nonatomic, strong) HHLayoutConstraintProxy *associateProxy_;
+
+@end
+
+@implementation NSLayoutConstraint (HHLayout)
+
+- (void)removeConstraintFromOwner {
+    if (self.associateProxy_.associateView) {
+        [self.associateProxy_.associateView removeConstraint:self];
+    }
+}
+
+- (void)setAssociateProxy_:(HHLayoutConstraintProxy *)associateProxy_ {
+    objc_setAssociatedObject(self, @selector(associateProxy_), associateProxy_, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (HHLayoutConstraintProxy *)associateProxy_ {
+    return objc_getAssociatedObject(self, @selector(associateProxy_));
+}
+
+@end
+
 
 @interface UIView ()
 
@@ -46,8 +88,8 @@ static char * const isHeightSelfKey         = "isHeightSelfKey";
 
 @end
 
-static NSLayoutRelation relation_ = NSLayoutRelationEqual;
 static CGFloat multiply_ = 1.0f;
+static NSLayoutRelation relation_ = NSLayoutRelationEqual;
 
 @implementation UIView (HHLayout)
 
@@ -165,22 +207,6 @@ static CGFloat multiply_ = 1.0f;
 
 - (NSLayoutConstraint *)centY_cs {
     return objc_getAssociatedObject(self, centerYConstraintKey);
-}
-
-- (void)setIsWidthSelf:(BOOL)isWidthSelf {
-    objc_setAssociatedObject(self, isWidthSelfKey, @(isWidthSelfKey), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)isWidthSelf {
-    return [objc_getAssociatedObject(self, isWidthSelfKey) boolValue];
-}
-
-- (void)setIsHeightSelf:(BOOL)isHeightSelf {
-    objc_setAssociatedObject(self, isHeightSelfKey, @(isHeightSelfKey), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)isHeightSelf {
-    return [objc_getAssociatedObject(self, isHeightSelfKey) boolValue];
 }
 
 - (UIView *)top_ {
@@ -467,54 +493,44 @@ static CGFloat multiply_ = 1.0f;
 }
 
 - (void)removeAllConstraint_ {
-    UIView *commonSuperview = [self closestCommonSuperview:self.relativeView];
     if (self.widt_cs) {
-        if (self.isWidthSelf) {
-            [self removeConstraint:self.widt_cs];
-        } else {
-            [commonSuperview removeConstraint:self.widt_cs];
-        }
+        [self.widt_cs removeConstraintFromOwner];
         self.widt_cs = nil;
     }
     if (self.heit_cs) {
-        if (self.isHeightSelf) {
-            [self removeConstraint:self.heit_cs];
-        } else {
-            [commonSuperview removeConstraint:self.heit_cs];
-        }
+        [self.heit_cs removeConstraintFromOwner];
         self.heit_cs = nil;
     }
-    
     if (self.top_cs) {
-        [commonSuperview removeConstraint:self.top_cs];
+        [self.top_cs removeConstraintFromOwner];
         self.top_cs = nil;
     }
     if (self.left_cs) {
-        [commonSuperview removeConstraint:self.left_cs];
+        [self.left_cs removeConstraintFromOwner];
         self.left_cs = nil;
     }
     if (self.bott_cs) {
-        [commonSuperview removeConstraint:self.bott_cs];
+        [self.bott_cs removeConstraintFromOwner];
         self.bott_cs = nil;
     }
     if (self.righ_cs) {
-        [commonSuperview removeConstraint:self.righ_cs];
+        [self.righ_cs removeConstraintFromOwner];
         self.righ_cs = nil;
     }
     if (self.lead_cs) {
-        [commonSuperview removeConstraint:self.lead_cs];
+        [self.lead_cs removeConstraintFromOwner];
         self.lead_cs = nil;
     }
     if (self.trai_cs) {
-        [commonSuperview removeConstraint:self.trai_cs];
+        [self.trai_cs removeConstraintFromOwner];
         self.trai_cs = nil;
     }
     if (self.centX_cs) {
-        [commonSuperview removeConstraint:self.centX_cs];
+        [self.centX_cs removeConstraintFromOwner];
         self.centX_cs = nil;
     }
     if (self.centY_cs) {
-        [commonSuperview removeConstraint:self.centY_cs];
+        [self.centY_cs removeConstraintFromOwner];
         self.centY_cs = nil;
     }
 }
@@ -532,11 +548,13 @@ static CGFloat multiply_ = 1.0f;
     relation_ = NSLayoutRelationEqual;
     [self.offsetArrayM removeAllObjects];
     [self.layoutArrayM removeAllObjects];
+    self.offsetArrayM = nil;
+    self.layoutArrayM = nil;
     if (self.relativeView) {
         [self.relativeView.offsetArrayM removeAllObjects];
         [self.relativeView.layoutArrayM removeAllObjects];
-        self.relativeView.layoutArrayM = nil;
         self.relativeView.offsetArrayM = nil;
+        self.relativeView.layoutArrayM = nil;
         self.relativeView = nil;
     }
 }
@@ -562,96 +580,94 @@ static CGFloat multiply_ = 1.0f;
     switch (source) {
         case NSLayoutAttributeLeft: {
             if (self.left_cs) {
-                [commonSuperview removeConstraint:self.left_cs];
+                [self.left_cs removeConstraintFromOwner];
             }
             self.left_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeft relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.left_cs];
+            self.left_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeRight: {
             if (self.righ_cs) {
-                [commonSuperview removeConstraint:self.righ_cs];
+                [self.righ_cs removeConstraintFromOwner];
             }
             self.righ_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.righ_cs];
+            self.righ_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeTop: {
             if (self.top_cs) {
-                [commonSuperview removeConstraint:self.top_cs];
+                [self.top_cs removeConstraintFromOwner];
             }
             self.top_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTop relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.top_cs];
+            self.top_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeBottom: {
             if (self.bott_cs) {
-                [commonSuperview removeConstraint:self.bott_cs];
+                [self.bott_cs removeConstraintFromOwner];
             }
             self.bott_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.bott_cs];
+            self.bott_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeLeading: {
             if (self.lead_cs) {
-                [commonSuperview removeConstraint:self.lead_cs];
+                [self.lead_cs removeConstraintFromOwner];
             }
             self.lead_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.lead_cs];
+            self.lead_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeTrailing: {
             if (self.trai_cs) {
-                [commonSuperview removeConstraint:self.trai_cs];
+                [self.trai_cs removeConstraintFromOwner];
             }
             self.trai_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.trai_cs];
+            self.trai_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeWidth: {
             if (self.widt_cs) {
-                if (self.offsetArrayM.count && constant) {
-                    self.isWidthSelf = YES;
-                } else if (view) {
-                    self.isWidthSelf = NO;
-                } else {
-                    self.isWidthSelf = YES;
-                }
-                [self.offsetArrayM.count&&constant?self:view?commonSuperview:self removeConstraint:self.widt_cs];
+                [self.widt_cs removeConstraintFromOwner];
             }
             self.widt_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:multiply_ constant:constant];
-            [self.offsetArrayM.count&&constant?self:view?commonSuperview:self addConstraint:self.widt_cs];
+            UIView *resultView = self.offsetArrayM.count&&constant?self:view?commonSuperview:self;
+            [resultView addConstraint:self.widt_cs];
+            self.widt_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:resultView];
         }
             break;
         case NSLayoutAttributeHeight: {
             if (self.heit_cs) {
-                if (self.offsetArrayM.count && constant) {
-                    self.isHeightSelf = YES;
-                } else if (view) {
-                    self.isHeightSelf = NO;
-                } else {
-                    self.isHeightSelf = YES;
-                }
-                [self.offsetArrayM.count&&constant?self:view?commonSuperview:self removeConstraint:self.heit_cs];
+                [self.heit_cs removeConstraintFromOwner];
             }
             self.heit_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:relation_ toItem:self.offsetArrayM.count&&constant?nil:view attribute:relative multiplier:multiply_ constant:constant];
-            [self.offsetArrayM.count&&constant?self:view?commonSuperview:self addConstraint:self.heit_cs];
+            UIView *resultView = self.offsetArrayM.count&&constant?self:view?commonSuperview:self;
+            [resultView addConstraint:self.heit_cs];
+            self.heit_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:resultView];
         }
             break;
         case NSLayoutAttributeCenterX: {
             if (self.centX_cs) {
-                [commonSuperview removeConstraint:self.centX_cs];
+                [self.centX_cs removeConstraintFromOwner];
             }
             self.centX_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.centX_cs];
+            self.centX_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
         case NSLayoutAttributeCenterY: {
             if (self.centY_cs) {
-                [commonSuperview removeConstraint:self.centY_cs];
+                [self.centY_cs removeConstraintFromOwner];
             }
             self.centY_cs = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:relation_ toItem:view?:self.superview attribute:relative multiplier:1.0 constant:constant];
             [commonSuperview addConstraint:self.centY_cs];
+            self.centY_cs.associateProxy_ = [HHLayoutConstraintProxy proxyWithView:commonSuperview];
         }
             break;
             
