@@ -61,13 +61,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define mSystemItalicFont(size) [UIFont italicSystemFontOfSize:(size)]
 #define mCustomFont(name, fontSize) [UIFont fontWithName:(name) size:(fontSize)]
 
-#define dispatch_main_async_safely(block)\
-if ([NSThread isMainThread]) {\
-    block();\
-} else {\
-    dispatch_async(dispatch_get_main_queue(), block);\
-}
-
 #if DEBUG
 #define hh_keywordify autoreleasepool {}
 #else
