@@ -88,4 +88,12 @@ static inline void performActionOnMainThread(HHActionBlock actionBlock) {
     }
 }
 
+static inline void performActionOnBackgroundThread(HHActionBlock actionBlock) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if (actionBlock) {
+            actionBlock();
+        }
+    });
+}
+
 NS_ASSUME_NONNULL_END
