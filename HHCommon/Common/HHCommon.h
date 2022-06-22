@@ -6,6 +6,7 @@
 //
 
 #import "UIView+HHAdd.h"
+#import "NSDate+HHAdd.h"
 #import "UIImage+HHAdd.h"
 #import "UIView+HHFrame.h"
 #import "UIView+HHLayout.h"

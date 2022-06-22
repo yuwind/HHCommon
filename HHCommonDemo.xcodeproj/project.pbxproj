@@ -40,6 +40,7 @@
 		FEBB76E92838802B0062D595 /* BaseBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEBB76CE2838802B0062D595 /* BaseBundle.bundle */; };
 		FEBB76EA2838802B0062D595 /* HHBaseTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */; };
 		FEBB76EB2838802B0062D595 /* HHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */; };
+		FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseTableViewCellModel.m; sourceTree = "<group>"; };
 		FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseNavigationController.m; sourceTree = "<group>"; };
 		FEBB76D32838802B0062D595 /* HHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseTableViewCell.h; sourceTree = "<group>"; };
+		FEBB988B286005B40098ECD4 /* NSDate+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HHAdd.h"; sourceTree = "<group>"; };
+		FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HHAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 				FEBB76A72838802B0062D595 /* HHCommon.h */,
 				FEBB76BA2838802B0062D595 /* UIView+HHAdd.h */,
 				FEBB76AA2838802B0062D595 /* UIView+HHAdd.m */,
+				FEBB988B286005B40098ECD4 /* NSDate+HHAdd.h */,
+				FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */,
 				FEBB76A92838802B0062D595 /* UIView+HHFrame.h */,
 				FEBB76BC2838802B0062D595 /* UIView+HHFrame.m */,
 				FEBB76A82838802B0062D595 /* UIView+HHLayout.h */,
@@ -309,6 +314,7 @@
 				FEBB76D62838802B0062D595 /* NSNumber+HHAdd.m in Sources */,
 				FEBB76DD2838802B0062D595 /* UIView+HHLayout.m in Sources */,
 				FEBB76D82838802B0062D595 /* HHSafeTimer.m in Sources */,
+				FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */,
 				FEBB76DB2838802B0062D595 /* HHGradientLayerView.m in Sources */,
 				FEBB76D42838802B0062D595 /* NSObject+HHAdd.m in Sources */,
 				FEBB76DF2838802B0062D595 /* NSDictionary+HHSafe.m in Sources */,

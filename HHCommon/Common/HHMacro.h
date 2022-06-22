@@ -61,6 +61,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define mSystemItalicFont(size) [UIFont italicSystemFontOfSize:(size)]
 #define mCustomFont(name, fontSize) [UIFont fontWithName:(name) size:(fontSize)]
 
+#define HHCLAMP(val, min, max) MIN(MAX(val, min), max)
+
 #if DEBUG
 #define hh_keywordify autoreleasepool {}
 #else
