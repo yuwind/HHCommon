@@ -152,6 +152,34 @@ NSCalendar * calendarInstance(void) {
     return [calendar dateFromComponents:components];
 }
 
+- (NSDate *)hh_weekOffset:(NSInteger)offset {
+    NSCalendar *calendar = calendarInstance();
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    [offsetComponents setWeekOfMonth:offset];
+    return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
+}
+
+- (NSDate *)hh_dateOffset:(NSInteger)offset {
+    NSCalendar *calendar = calendarInstance();
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    [offsetComponents setDay:offset];
+    return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
+}
+
+- (NSDate *)hh_monthOffset:(NSInteger)offset {
+    NSCalendar *calendar = calendarInstance();
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    [offsetComponents setMonth:offset];
+    return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
+}
+
+- (NSDate *)hh_yearOffset:(NSInteger)offset {
+    NSCalendar *calendar = calendarInstance();
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    [offsetComponents setYear:offset];
+    return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
+}
+
 #pragma private
 
 - (NSInteger)hh_dateComponentWithUnit:(NSCalendarUnit)unit {

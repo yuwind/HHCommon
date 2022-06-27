@@ -23,33 +23,9 @@
     
     self.title = @"测试数据";
     
-    NSString *dataString = @"2022-01-01";
-    NSDate *futureDate = dataString.hh_toDate;
-    NSDate *date = [NSDate date];
-    NSDate *result = [futureDate hh_lastDateInWeek];
-    NSLog(@"%@",result);
-    NSTimeInterval interval = CFAbsoluteTimeGetCurrent();
-    NSLog(@"%lf",interval);
-    NSMutableArray *arrayM1 = @[].mutableCopy;
-    for (NSInteger i = 1; i < 4; i++) {
-        NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
-        NSString *workoutMark = formatString(@"%ld%.0lf",i, interval);
-        [arrayM1 hh_addObjectSafely:workoutMark];
-    }
-    
-    NSMutableArray *arrayM2 = @[].mutableCopy;
-    for (NSInteger i = 2; i < 6; i++) {
-        NSTimeInterval interval = [[NSDate date] timeIntervalSinceReferenceDate] * 1000;
-        NSString *workoutMark = formatString(@"%ld%.0lf",i, interval);
-        [arrayM2 hh_addObjectSafely:workoutMark];
-    }
-    
-    NSArray *localArray = nil;
-    NSArray *cloudArray = @[@"3",@"4",@"5"];
-    NSMutableSet *localSetM = [NSMutableSet setWithArray:localArray];
-    NSMutableSet *cloudSetM = [NSMutableSet setWithArray:arrayM2];
-    [localSetM unionSet:cloudSetM];
-    NSLog(@"%@", localSetM.allObjects);
+    NSDate *now = [NSDate date];
+    NSDate *date = [now hh_yearOffset:1];
+    NSLog(@"%@  %@",now ,date);
     
     [self.containerView hh_addLabel:^(UILabel * _Nonnull label) {
         self.label1 = label;
