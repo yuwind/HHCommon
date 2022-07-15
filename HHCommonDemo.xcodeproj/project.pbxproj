@@ -15,6 +15,7 @@
 		5066DBAA281D633E00461CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBA9281D633E00461CD1 /* Assets.xcassets */; };
 		5066DBAD281D633E00461CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBAB281D633E00461CD1 /* LaunchScreen.storyboard */; };
 		5066DBB0281D633E00461CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066DBAF281D633E00461CD1 /* main.m */; };
+		FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */; };
 		FE662F7228446BE50030FFA2 /* HHGradientLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */; };
 		FEBB76D42838802B0062D595 /* NSObject+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */; };
 		FEBB76D52838802B0062D595 /* UIView+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76AA2838802B0062D595 /* UIView+HHAdd.m */; };
@@ -58,6 +59,8 @@
 		5066DBAC281D633E00461CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5066DBAE281D633E00461CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5066DBAF281D633E00461CD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE0678F1287FB93A0041E6F5 /* HHDeallocMediumObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDeallocMediumObject.h; sourceTree = "<group>"; };
+		FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDeallocMediumObject.m; sourceTree = "<group>"; };
 		FE662F7028446BE50030FFA2 /* HHGradientLayerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerButton.h; sourceTree = "<group>"; };
 		FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHGradientLayerButton.m; sourceTree = "<group>"; };
 		FEBB76A12838802B0062D595 /* HHDisableQuickClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHDisableQuickClickButton.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				FEBB76C02838802B0062D595 /* NSMutableDictionary+HHSafe.m */,
 				FEBB76A12838802B0062D595 /* HHDisableQuickClickButton.h */,
 				FEBB76B82838802B0062D595 /* HHDisableQuickClickButton.m */,
+				FE0678F1287FB93A0041E6F5 /* HHDeallocMediumObject.h */,
+				FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */,
 				FEBB76AE2838802B0062D595 /* HHCrashCaughtHandler.h */,
 				FEBB76C32838802B0062D595 /* HHCrashCaughtHandler.m */,
 				FE662F7028446BE50030FFA2 /* HHGradientLayerButton.h */,
@@ -266,7 +271,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					5066DB99281D633B00461CD1 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -312,6 +317,7 @@
 			files = (
 				50355D3C282DEF57005E1B12 /* DemoTableViewCell.m in Sources */,
 				FEBB76D62838802B0062D595 /* NSNumber+HHAdd.m in Sources */,
+				FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */,
 				FEBB76DD2838802B0062D595 /* UIView+HHLayout.m in Sources */,
 				FEBB76D82838802B0062D595 /* HHSafeTimer.m in Sources */,
 				FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */,

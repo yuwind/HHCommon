@@ -7,6 +7,8 @@
 
 #import "NSObject+HHAdd.h"
 #import <objc/runtime.h>
+#import "HHDeallocMediumObject.h"
+#import "NSMutableArray+HHSafe.h"
 
 @implementation NSObject (HHAdd)
 
@@ -38,6 +40,19 @@
     } else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
+}
+
+- (void)hh_afterDeallocCallBack:(void(^ _Nullable)(void))callBack {
+    if (callBack == nil) {
+        return;
+    }
+    NSMutableArray *arrayM = objc_getAssociatedObject(self, @selector(hh_afterDeallocCallBack:));
+    if (arrayM == nil) {
+        arrayM = @[].mutableCopy;
+    }
+    HHDeallocMediumObject *object = [HHDeallocMediumObject mediumObjectWithCallBack:callBack];
+    [arrayM hh_addObjectSafely:object];
+    objc_setAssociatedObject(self, @selector(hh_afterDeallocCallBack:), arrayM, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

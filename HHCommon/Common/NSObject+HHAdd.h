@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 //交换方法
 + (void)hh_swizzleMethodWithOriginal:(SEL)original swizzled:(SEL)swizzled;
 
+//对象销毁时回调callBack
+- (void)hh_afterDeallocCallBack:(void(^ _Nullable)(void))callBack;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,13 +20,15 @@
     
     self.title = @"测试数据";
     
-    NSDate *now = [NSDate date];
-    NSDate *date = [now hh_yearOffset:1];
-    NSLog(@"%@  %@",now ,date);
-}
-
-- (void)dealloc {
-    NSLog(@"dealloc %@", self);
+    @weakly(self);
+    [self.view hh_addButton:^(UIButton * _Nonnull button) {
+        [button setTitle:@"Action" forState:UIControlStateNormal];
+        [button setTitleColor:UIColor.darkTextColor forState:UIControlStateNormal];
+        button.cent_.on_();
+    } action:^(UIButton * _Nonnull sender) {
+        @strongly(self);
+        [self.navigationController pushViewController:[DemoTableViewController new] animated:YES];
+    }];
 }
 
 @end

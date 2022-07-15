@@ -19,6 +19,21 @@
  
     self.title = @"Demo TableView";
     self.backButton.tintColor = [UIColor cyanColor];
+    
+    [self.view hh_addButton:^(UIButton * _Nonnull button) {
+        [button setTitle:@"Action" forState:UIControlStateNormal];
+        [button setTitleColor:UIColor.redColor forState:UIControlStateNormal];
+        button.cent_.on_();
+    } action:^(UIButton * _Nonnull sender) {
+        
+    }];
+    
+    [self hh_afterDeallocCallBack:^{
+        NSLog(@"first dealloc DemoTableViewController");
+    }];
+    [self hh_afterDeallocCallBack:^{
+        NSLog(@"second dealloc DemoTableViewController");
+    }];
 }
 
 - (NSArray *)modelArray {
