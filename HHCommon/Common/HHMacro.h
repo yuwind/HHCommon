@@ -27,13 +27,22 @@ NS_ASSUME_NONNULL_BEGIN
 #define mIsLargeThan4Inch (mScreenWidth >= 375)
 #define mAdapter(value) ((value) * MIN(mScreenWidth, mScreenHeight) / 375.0f)
 
-#define mSystemSafeAreaInsets    mSafeAreaInsets(UIApplication.sharedApplication.delegate.window)
+#define mAvailableWindow ({UIWindow *window = nil;\
+if ([UIApplication.sharedApplication.delegate respondsToSelector:@selector(window)]) {\
+    window = UIApplication.sharedApplication.delegate.window;\
+}\
+if (window == nil) {\
+    window = UIApplication.sharedApplication.keyWindow;\
+}\
+window;})
+
+#define mSystemSafeAreaInsets    mSafeAreaInsets(mAvailableWindow)
 #define mSafeAreaInsets(view) ({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = view.safeAreaInsets;} else {i = UIEdgeInsetsMake(20, 0, 0, 0);} i;})
 
 #define mIsIphoneX \
 ({BOOL isPhoneX = NO;\
 if (@available(iOS 11.0, *)) {\
-isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+    isPhoneX = mAvailableWindow.safeAreaInsets.bottom > 0.0;\
 }\
 (isPhoneX);})
 
