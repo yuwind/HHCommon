@@ -126,6 +126,13 @@
 }
 
 - (void)setInterfaceOrientation:(UIInterfaceOrientation)orientation {
+    if (@available(iOS 16, *)) {
+        [self setNeedsUpdateOfSupportedInterfaceOrientations];
+        UIWindowScene *windowScene = self.view.window.windowScene;
+        UIWindowSceneGeometryPreferencesIOS *preferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:orientation];
+        [windowScene requestGeometryUpdateWithPreferences:preferences errorHandler:nil];
+        return;
+    }
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector  = NSSelectorFromString(@"setOrientation:");
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
