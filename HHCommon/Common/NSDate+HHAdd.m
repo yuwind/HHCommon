@@ -46,6 +46,26 @@ NSCalendar * calendarInstance(void) {
     return ([date hh_year] == [self hh_year]) && ([date hh_month] == [self hh_month]) && ([date hh_day] == [self hh_day]);
 }
 
+- (BOOL)hh_isFirstDateInMonth {
+    NSDate *firstDate = [self hh_firstDateInMonth];
+    return [self hh_isSameDay:firstDate];
+}
+
+- (BOOL)hh_isLastDateInMonth {
+    NSDate *lastDate = [self hh_lastDateInMonth];
+    return [self hh_isSameDay:lastDate];
+}
+
+- (BOOL)hh_isFirstDateInWeek {
+    NSDate *firstDate = [self hh_firstDateInWeek];
+    return [self hh_isSameDay:firstDate];
+}
+
+- (BOOL)hh_isLastDateInWeek {
+    NSDate *lastDate = [self hh_lastDateInWeek];
+    return [self hh_isSameDay:lastDate];
+}
+
 - (NSInteger)hh_year {
     return [self hh_dateComponentWithUnit:NSCalendarUnitYear];
 }

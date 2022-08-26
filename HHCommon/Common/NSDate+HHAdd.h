@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)hh_isYestoday;
 - (BOOL)hh_isTomorrow;
 - (BOOL)hh_isSameDay:(NSDate *)date;
+- (BOOL)hh_isFirstDateInMonth;
+- (BOOL)hh_isLastDateInMonth;
+- (BOOL)hh_isFirstDateInWeek;
+- (BOOL)hh_isLastDateInWeek;
 - (NSInteger)hh_year;
 - (NSInteger)hh_month;
 - (NSInteger)hh_day;
