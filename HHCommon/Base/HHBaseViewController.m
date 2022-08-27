@@ -126,13 +126,27 @@
 }
 
 - (void)setInterfaceOrientation:(UIInterfaceOrientation)orientation {
-    if (@available(iOS 16, *)) {
-        [self setNeedsUpdateOfSupportedInterfaceOrientations];
+    // mark Xcode13 兼容方案
+    if (@available(iOS 16.0, *)) {
+        if ([self respondsToSelector:@selector(setNeedsUpdateOfSupportedInterfaceOrientations)]) {
+            [self performSelector:@selector(setNeedsUpdateOfSupportedInterfaceOrientations)];
+        }
         UIWindowScene *windowScene = self.view.window.windowScene;
-        UIWindowSceneGeometryPreferencesIOS *preferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:orientation];
-        [windowScene requestGeometryUpdateWithPreferences:preferences errorHandler:nil];
+        id preferences =[NSClassFromString(@"UIWindowSceneGeometryPreferencesIOS") new];
+        [preferences setValue:@(orientation) forKey:@"interfaceOrientations"];
+        void (^errorHandler)(NSError *error) = ^(NSError *error) {};
+        if ([windowScene respondsToSelector:@selector(requestGeometryUpdateWithPreferences:errorHandler:)]) {
+            [windowScene performSelector:@selector(requestGeometryUpdateWithPreferences:errorHandler:) withObject:preferences withObject:errorHandler];
+        }
         return;
     }
+//    if (@available(iOS 16, *)) {
+//        [self setNeedsUpdateOfSupportedInterfaceOrientations];
+//        UIWindowScene *windowScene = self.view.window.windowScene;
+//        UIWindowSceneGeometryPreferencesIOS *preferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:orientation];
+//        [windowScene requestGeometryUpdateWithPreferences:preferences errorHandler:nil];
+//        return;
+//    }
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector  = NSSelectorFromString(@"setOrientation:");
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
