@@ -142,6 +142,24 @@ NSCalendar * calendarInstance(void) {
     return [calendar ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:self];
 }
 
+- (NSInteger)hh_weeksInMonth {
+    NSCalendar *calendar = calendarInstance();
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:self];
+    return range.length;
+}
+
+- (NSInteger)hh_weeksInYear {
+    NSCalendar *calendar = calendarInstance();
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:self];
+    return range.length;
+}
+
+- (NSDate *)hh_dateWithoutTime {
+    NSCalendar *calendar = calendarInstance();
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
+    return [calendar dateFromComponents:components];
+}
+
 - (NSDate *)hh_firstDateInWeek {
     NSCalendar *calendar = calendarInstance();
     NSDate *beginningOfWeek = nil;
@@ -177,18 +195,6 @@ NSCalendar * calendarInstance(void) {
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setWeekOfMonth:offset];
     return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
-}
-
-- (NSInteger)hh_weeksInMonth {
-    NSCalendar *calendar = calendarInstance();
-    NSRange range = [calendar rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:self];
-    return range.length;
-}
-
-- (NSInteger)hh_weeksInYear {
-    NSCalendar *calendar = calendarInstance();
-    NSRange range = [calendar rangeOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:self];
-    return range.length;
 }
 
 - (NSDate *)hh_dateOffset:(NSInteger)offset {

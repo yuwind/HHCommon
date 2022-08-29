@@ -37,12 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)hh_dayIndexInWeek;
 - (NSInteger)hh_dayIndexInMonth;
 - (NSInteger)hh_dayIndexInYear;
+- (NSInteger)hh_weeksInMonth;
+- (NSInteger)hh_weeksInYear;
+- (NSDate *)hh_dateWithoutTime;
 - (NSDate *)hh_firstDateInWeek;
 - (NSDate *)hh_lastDateInWeek;
 - (NSDate *)hh_firstDateInMonth;
 - (NSDate *)hh_lastDateInMonth;
-- (NSInteger)hh_weeksInMonth;
-- (NSInteger)hh_weeksInYear;
 - (NSDate *)hh_dateOffset:(NSInteger)offset;
 - (NSDate *)hh_weekOffset:(NSInteger)offset;
 - (NSDate *)hh_monthOffset:(NSInteger)offset;
