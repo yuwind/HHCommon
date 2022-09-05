@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHGradientLayerButton : UIButton
 
+@property (nonatomic, copy) NSArray<UIColor *> *horizontalColorsArray;
+@property (nonatomic, copy) NSArray<UIColor *> *verticalColorsArray;
+
 //support autolayout
 - (void)setGradientBackgroundWithColors:(NSArray<UIColor *> *)colors locations:(NSArray<NSNumber *> *)locations startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
 
