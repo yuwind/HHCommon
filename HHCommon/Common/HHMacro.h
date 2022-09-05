@@ -37,7 +37,7 @@ if (window == nil) {\
 window;})
 
 #define mSystemSafeAreaInsets    mSafeAreaInsets(mAvailableWindow)
-#define mSafeAreaInsets(view) ({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = view.safeAreaInsets;} else {i = UIEdgeInsetsMake(20, 0, 0, 0);} i;})
+#define mSafeAreaInsets(view) ({UIEdgeInsets i; if(@available(iOS 11.0, *)) {if ([UIDevice currentDevice].systemVersion.integerValue == 11) {if (mIsIphoneX) {i = view.safeAreaInsets;} else {i = UIEdgeInsetsMake(20, 0, 0, 0);}} else {i = view.safeAreaInsets;}} else {i = UIEdgeInsetsMake(20, 0, 0, 0);} i;})
 
 #define mIsIphoneX \
 ({BOOL isPhoneX = NO;\

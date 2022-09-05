@@ -7,7 +7,7 @@
 
 #import "NSDate+HHAdd.h"
 
-#define mDefaultDateFormat @"yyyy-MM-dd"
+#define mDefaultDateFormat @"yyyyMMdd"
 
 NSDateFormatter * dateFormatterInstance(void) {
     static NSDateFormatter *_dateFormatter = nil;

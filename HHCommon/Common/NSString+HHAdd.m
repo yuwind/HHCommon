@@ -134,6 +134,20 @@
     return result;
 }
 
+- (NSArray<NSString *> * _Nullable (^)(NSRange))toJoinArray {
+    return ^NSArray *(NSRange range) {
+        if (range.length == 0) {
+            return nil;
+        }
+        NSMutableArray *arrayM = @[].mutableCopy;
+        for (NSInteger i = range.location; i <= range.length; i++) {
+            NSString *resultString = formatString(@"%@%ld", self, i);
+            [arrayM addObject:resultString];
+        }
+        return arrayM.copy;
+    };
+}
+
 - (BOOL (^)(NSString *))contain {
     return ^BOOL(NSString *string) {
         if (!isValidString(string)) {
@@ -143,7 +157,7 @@
     };
 }
 
-- (NSArray *(^)(NSString *))split {
+- (NSArray<NSString *> * _Nonnull (^)(NSString * _Nonnull))split {
     return ^NSArray *(NSString *string) {
         if (!isValidString(string)) {
             return nil;

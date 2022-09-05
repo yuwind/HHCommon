@@ -77,6 +77,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable, readonly) NSString *toSpell;
 
 /**
+ *  字符串转拼接数组，range为闭区间
+ */
+@property (nonatomic, copy, readonly) NSArray<NSString *> * _Nullable (^toJoinArray)(NSRange range);
+
+/**
  *  是否包含字符串
  */
 @property (nonatomic, copy, readonly) BOOL (^contain)(NSString *string);
@@ -84,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  分割字符串
  */
-@property (nonatomic, copy, nullable, readonly) NSArray *(^split)(NSString *string);
+@property (nonatomic, copy, nullable, readonly) NSArray<NSString *> * _Nullable (^split)(NSString *string);
 
 /**
  *  替换字符串
