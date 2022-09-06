@@ -15,6 +15,7 @@
 		5066DBAA281D633E00461CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBA9281D633E00461CD1 /* Assets.xcassets */; };
 		5066DBAD281D633E00461CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBAB281D633E00461CD1 /* LaunchScreen.storyboard */; };
 		5066DBB0281D633E00461CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066DBAF281D633E00461CD1 /* main.m */; };
+		508E939B28C638AD00C560CF /* UIView+HHArrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E939928C638AC00C560CF /* UIView+HHArrange.m */; };
 		FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */; };
 		FE662F7228446BE50030FFA2 /* HHGradientLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */; };
 		FEBB76D42838802B0062D595 /* NSObject+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */; };
@@ -59,6 +60,8 @@
 		5066DBAC281D633E00461CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5066DBAE281D633E00461CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5066DBAF281D633E00461CD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		508E939928C638AC00C560CF /* UIView+HHArrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHArrange.m"; sourceTree = "<group>"; };
+		508E939A28C638AC00C560CF /* UIView+HHArrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHArrange.h"; sourceTree = "<group>"; };
 		FE0678F1287FB93A0041E6F5 /* HHDeallocMediumObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDeallocMediumObject.h; sourceTree = "<group>"; };
 		FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDeallocMediumObject.m; sourceTree = "<group>"; };
 		FE662F7028446BE50030FFA2 /* HHGradientLayerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerButton.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				FEBB76BC2838802B0062D595 /* UIView+HHFrame.m */,
 				FEBB76A82838802B0062D595 /* UIView+HHLayout.h */,
 				FEBB76BB2838802B0062D595 /* UIView+HHLayout.m */,
+				508E939A28C638AC00C560CF /* UIView+HHArrange.h */,
+				508E939928C638AC00C560CF /* UIView+HHArrange.m */,
 				FEBB76B62838802B0062D595 /* NSObject+HHAdd.h */,
 				FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */,
 				FEBB76A32838802B0062D595 /* NSString+HHAdd.h */,
@@ -316,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50355D3C282DEF57005E1B12 /* DemoTableViewCell.m in Sources */,
+				508E939B28C638AD00C560CF /* UIView+HHArrange.m in Sources */,
 				FEBB76D62838802B0062D595 /* NSNumber+HHAdd.m in Sources */,
 				FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */,
 				FEBB76DD2838802B0062D595 /* UIView+HHLayout.m in Sources */,
