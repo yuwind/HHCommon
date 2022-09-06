@@ -10,6 +10,7 @@
 #import "UIImage+HHAdd.h"
 #import "UIView+HHFrame.h"
 #import "UIView+HHLayout.h"
+#import "UIView+HHArrange.h"
 #import "NSString+HHAdd.h"
 #import "NSNumber+HHAdd.h"
 #import "NSObject+HHAdd.h"
