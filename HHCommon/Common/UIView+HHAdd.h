@@ -114,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param block 回调事件
  */
-- (void)hh_addClickAction:(void (^_Nullable)(UIView *sender))block;
+- (void)hh_addClickAction:(void (^_Nullable)(id sender))block;
 
 @end
 

@@ -228,7 +228,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     }
 }
 
-- (void)hh_addClickAction:(void (^_Nullable)(UIView *sender))block {
+- (void)hh_addClickAction:(void (^_Nullable)(id sender))block {
     if ([self isKindOfClass:UIControl.class]) {
         UIControlEvents events = UIControlEventTouchUpInside;
         if ([self isKindOfClass:UISwitch.class]) {
@@ -249,7 +249,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     }];
 }
 
-- (void)hh_addBlockEvents:(UIControlEvents)controlEvents action:(void (^)(UIControl *sender))block {
+- (void)hh_addBlockEvents:(UIControlEvents)controlEvents action:(void (^)(id sender))block {
     if (![self isKindOfClass:[UIControl class]] || block == nil) {
         return;
     }
@@ -259,7 +259,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
 }
 
 - (void)hh_controlClickedAction:(UIControl *)control {
-    void (^block)(UIControl *) = [self.actionMutableDictionary objectForKey:mViewAddress(control)];
+    void (^block)(id) = [self.actionMutableDictionary objectForKey:mViewAddress(control)];
     if (block) {
         block(control);
     }

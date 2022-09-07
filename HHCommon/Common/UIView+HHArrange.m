@@ -53,24 +53,26 @@
     }
 }
 
-- (void)hh_arrangeScrollViewSubviews:(NSArray<UIView *> *)subViews inset:(UIEdgeInsets)inset itemConstant:(CGFloat)constant space:(CGFloat)space style:(HHArrangeStyle)style {
+- (void)hh_arrangeScrollViewSubviews:(NSArray<UIView *> *)subViews inset:(UIEdgeInsets)inset widthOrHeight:(CGFloat)widthOrHeight margin:(CGFloat)margin style:(HHArrangeStyle)style{
     UIView *preView = nil;
     if (style == HHArrangeHorizonal) {
-        for (int i = 0; i < subViews.count; i++) {
+        for (NSInteger i = 0; i < subViews.count; i++) {
             UIView *subView = subViews[i];
             if (i == 0) { subView.left_.top_.bott_.offsets_(@(inset.left),@(inset.top),@(-inset.bottom),nil).on_();
-                subView.widt_.offset_(constant).on_();
+                subView.widt_.offset_(widthOrHeight).on_();
                 subView.centY_.on_();
             }
             if (i == (subViews.count-1)) {
-                if (preView) { subView.left_.top_.bott_.widt_.centY_.equalTo(preView.righ_).offset_(space).on_();
+                if (preView) { subView.left_.equalTo(preView.righ_).offset_(margin).on_();
+                    subView.top_.bott_.centY_.equalTo(preView).on_();
+                    subView.widt_.offset_(widthOrHeight).on_();
                     subView.righ_.offset_(-inset.right).on_();
-                    subViews[0].widt_.equalTo(subView).on_();
                 } else {
                     subView.righ_.offset_(-inset.right).on_();
                 }
             } else if (preView) {
-                subView.left_.top_.bott_.widt_.centY_.equalTo(preView.righ_).offset_(space).on_();
+                subView.left_.equalTo(preView.righ_).offset_(margin).on_();
+                subView.top_.bott_.widt_.centY_.equalTo(preView).on_();
             }
             preView = subView;
         }
@@ -78,18 +80,19 @@
         for (int i = 0; i < subViews.count; i++) {
             UIView *subView = subViews[i];
             if (i == 0) { subView.left_.top_.righ_.offsets_(@(inset.left),@(inset.top),@(-inset.right),nil).on_();
-                subView.heit_.offset_(constant).on_();
+                subView.heit_.offset_(widthOrHeight).on_();
                 subView.centX_.on_();
             }
             if (i == (subViews.count-1)) {
                 if (preView) {
-                    subView.top_.left_.righ_.heit_.centX_.equalTo(preView.bott_).offset_(space).on_();
+                    subView.top_.equalTo(preView.bott_).offset_(margin).on_();
+                    subView.left_.righ_.heit_.centX_.equalTo(preView).on_();
                     subView.bott_.offset_(-inset.bottom).on_();
-                    subViews[0].heit_.equalTo(subView).on_();
                 } else {
                     subView.bott_.offset_(-inset.right).on_();
                 }
-            } else if (preView) { subView.top_.left_.righ_.heit_.centX_.equalTo(preView.bott_).offset_(space).on_();
+            } else if (preView) { subView.top_.equalTo(preView.bott_).offset_(margin).on_();
+                subView.left_.righ_.heit_.centX_.equalTo(preView).on_();
             }
             preView = subView;
         }
