@@ -28,10 +28,10 @@ typedef NS_ENUM(NSUInteger, HHArrangeStyle) {
 
  @param subViews 待布局子视图
  @param inset 内边距
- @param space 间距
+ @param margin 间距
  @param style 布局方向
  */
-- (void)hh_arrangeSubviews:(NSArray <UIView *>*)subViews inset:(UIEdgeInsets)inset space:(CGFloat)space style:(HHArrangeStyle)style;
+- (void)hh_arrangeSubviews:(NSArray <UIView *>*)subViews inset:(UIEdgeInsets)inset margin:(CGFloat)margin style:(HHArrangeStyle)style;
 
 /**
  等比例设置ScrollView子视图

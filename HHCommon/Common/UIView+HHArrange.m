@@ -11,10 +11,10 @@
 @implementation UIView (HHArrange)
 
 - (void)hh_arrangeSubviews:(HHArrangeStyle)style {
-    [self hh_arrangeSubviews:self.subviews inset:UIEdgeInsetsZero space:0 style:style];
+    [self hh_arrangeSubviews:self.subviews inset:UIEdgeInsetsZero margin:0 style:style];
 }
 
-- (void)hh_arrangeSubviews:(NSArray<UIView *> *)subViews inset:(UIEdgeInsets)inset space:(CGFloat)space style:(HHArrangeStyle)style {
+- (void)hh_arrangeSubviews:(NSArray<UIView *> *)subViews inset:(UIEdgeInsets)inset margin:(CGFloat)margin style:(HHArrangeStyle)style {
     UIView *preView = nil;
     if (style == HHArrangeHorizonal) {
         for (NSInteger i = 0; i < subViews.count; i++) {
@@ -22,14 +22,14 @@
             if (i == 0) { subView.left_.top_.bott_.offsets_(@(inset.left),@(inset.top),@(-inset.bottom),nil).on_();
             }
             if (i == (subViews.count-1)) {
-                if (preView) { subView.left_.top_.bott_.widt_.equalTo(preView.righ_).offset_(space).on_();
+                if (preView) { subView.left_.top_.bott_.widt_.equalTo(preView.righ_).offset_(margin).on_();
                     subView.righ_.offset_(-inset.right).on_();
                     subViews[0].widt_.equalTo(subView).on_();
                 } else {
                     subView.righ_.offset_(-inset.right).on_();
                 }
             } else if (preView) {
-                subView.left_.top_.bott_.widt_.equalTo(preView.righ_).offset_(space).on_();
+                subView.left_.top_.bott_.widt_.equalTo(preView.righ_).offset_(margin).on_();
             }
             preView = subView;
         }
@@ -40,13 +40,13 @@
             }
             if (i == (subViews.count-1)) {
                 if (preView) {
-                    subView.top_.left_.righ_.heit_.equalTo(preView.bott_).offset_(space).on_();
+                    subView.top_.left_.righ_.heit_.equalTo(preView.bott_).offset_(margin).on_();
                     subView.bott_.offset_(-inset.bottom).on_();
                     subViews[0].heit_.equalTo(subView).on_();
                 } else {
                     subView.bott_.offset_(-inset.right).on_();
                 }
-            } else if (preView) { subView.top_.left_.righ_.heit_.equalTo(preView.bott_).offset_(space).on_();
+            } else if (preView) { subView.top_.left_.righ_.heit_.equalTo(preView.bott_).offset_(margin).on_();
             }
             preView = subView;
         }
