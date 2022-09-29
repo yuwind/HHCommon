@@ -43,6 +43,7 @@
 		FEBB76EA2838802B0062D595 /* HHBaseTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */; };
 		FEBB76EB2838802B0062D595 /* HHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */; };
 		FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */; };
+		FEE81DCA28E5358900C0F768 /* HHArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE81DC928E5358900C0F768 /* HHArrowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,8 @@
 		FEBB76D32838802B0062D595 /* HHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseTableViewCell.h; sourceTree = "<group>"; };
 		FEBB988B286005B40098ECD4 /* NSDate+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HHAdd.h"; sourceTree = "<group>"; };
 		FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HHAdd.m"; sourceTree = "<group>"; };
+		FEE81DC828E5358900C0F768 /* HHArrowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArrowView.h; sourceTree = "<group>"; };
+		FEE81DC928E5358900C0F768 /* HHArrowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArrowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				FEBB76C72838802B0062D595 /* HHFileManager.m */,
 				FEBB76C22838802B0062D595 /* HHSafeTimer.h */,
 				FEBB76B12838802B0062D595 /* HHSafeTimer.m */,
+				FEE81DC828E5358900C0F768 /* HHArrowView.h */,
+				FEE81DC928E5358900C0F768 /* HHArrowView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				FEBB76EA2838802B0062D595 /* HHBaseTableViewCellModel.m in Sources */,
 				FEBB76E12838802B0062D595 /* NSMutableDictionary+HHSafe.m in Sources */,
 				FE662F7228446BE50030FFA2 /* HHGradientLayerButton.m in Sources */,
+				FEE81DCA28E5358900C0F768 /* HHArrowView.m in Sources */,
 				FEBB76DA2838802B0062D595 /* NSString+HHAdd.m in Sources */,
 				FEBB76E02838802B0062D595 /* HHEnableInsetsLabel.m in Sources */,
 				FEBB76E42838802B0062D595 /* NSArray+HHSafe.m in Sources */,

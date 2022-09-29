@@ -19,6 +19,7 @@
 #import "NSMutableArray+HHSafe.h"
 #import "NSMutableDictionary+HHSafe.h"
 #import "HHMacro.h"
+#import "HHArrowView.h"
 #import "HHSafeTimer.h"
 #import "HHFileManager.h"
 #import "HHCommonMethod.h"
