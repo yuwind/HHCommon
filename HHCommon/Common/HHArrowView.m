@@ -17,7 +17,7 @@
         _arrowHeight = 12;
         _fillColor = [UIColor whiteColor];
         _direction = HHArrowDirectionBottom;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
