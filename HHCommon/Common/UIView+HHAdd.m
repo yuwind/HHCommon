@@ -139,8 +139,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     if(selectedRange && position) {
         return;
     }
-    NSString *nameString = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    textField.text = nameString;
+    NSString *nameString = textField.text;
     BOOL isOverMax = NO;
     if (nameString.length > textField.hh_maxCharacters) {
         NSRange rangeIndex = [nameString rangeOfComposedCharacterSequenceAtIndex:textField.hh_maxCharacters];
