@@ -1,7 +1,6 @@
 
 Pod::Spec.new do |s|
   s.name         = 'HHCommon' 
-  s.version      = '1.0.2'
   s.summary      = 'HHCommon'
   s.description  = 'ui common method'
   s.homepage     = 'https://github.com/yuwind/HHCommon/wiki'

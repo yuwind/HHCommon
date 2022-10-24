@@ -408,6 +408,20 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
+- (UIView *(^)(CGFloat))leftRightInset {
+    return ^UIView *(CGFloat inset) {
+        self.left_.righ_.offsets_(@(inset),@(-inset),nil).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))topBottomInset {
+    return ^UIView *(CGFloat inset) {
+        self.top_.bott_.offsets_(@(inset),@(-inset),nil).on_();
+        return self;
+    };
+}
+
 - (UIView *(^)(CGRect))topLeft_ {
     return ^UIView *(CGRect rect) {
         self.top_.left_.widt_.heit_.
