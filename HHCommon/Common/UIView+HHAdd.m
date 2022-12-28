@@ -17,7 +17,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
 @implementation UITextField (HHMaxCharacters)
 
 - (void)setHh_maxCharacters:(NSUInteger)hh_maxCharacters {
-    objc_setAssociatedObject(self, kTextFieldMaxChar, @(hh_maxCharacters), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, kTextFieldMaxChar, @(hh_maxCharacters), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSUInteger)hh_maxCharacters {
     return ((NSNumber *)objc_getAssociatedObject(self, kTextFieldMaxChar)).unsignedIntegerValue;
@@ -28,7 +28,7 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
 @implementation UITextView (HHMaxCharacters)
 
 - (void)setHh_maxCharacters:(NSUInteger)hh_maxCharacters {
-    objc_setAssociatedObject(self, kTextViewMaxChar, @(hh_maxCharacters), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, kTextViewMaxChar, @(hh_maxCharacters), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSUInteger)hh_maxCharacters {

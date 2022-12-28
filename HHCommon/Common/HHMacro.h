@@ -47,7 +47,10 @@ if (@available(iOS 11.0, *)) {\
 (isPhoneX);})
 
 #define mNavigationBarHeight 44
-#define mStatusBarHeight mSystemSafeAreaInsets.top
+#define mStatusBarHeight ({CGFloat statusBarHeight;if (@available(iOS 13.0, *)) {\
+UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager;\
+statusBarHeight = statusBarManager.statusBarFrame.size.height;\
+} else { statusBarHeight = mSystemSafeAreaInsets.top; } statusBarHeight;})
 #define mNavigationBarAndStatusBarHeight (mNavigationBarHeight + mStatusBarHeight)
 #define mTabBarHeight 49
 #define mIndicatorHeight mSystemSafeAreaInsets.bottom
