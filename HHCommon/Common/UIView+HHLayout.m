@@ -408,6 +408,13 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
+- (UIView *(^)(CGSize))frozenSize {
+    return ^UIView *(CGSize size) {
+        self.size_.offsets_(@(size.width),@(size.height),nil).on_();
+        return self;
+    };
+}
+
 - (UIView *(^)(CGFloat))leftRightInset {
     return ^UIView *(CGFloat inset) {
         self.left_.righ_.offsets_(@(inset),@(-inset),nil).on_();

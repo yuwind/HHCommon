@@ -52,6 +52,7 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
 /**
  快速添加约束
  */
+@property (nonatomic, assign, readonly) UIView *(^frozenSize)(CGSize);//size
 @property (nonatomic, assign, readonly) UIView *(^leftRightInset)(CGFloat);//左右内边距
 @property (nonatomic, assign, readonly) UIView *(^topBottomInset)(CGFloat);//上下内边距
 @property (nonatomic, assign, readonly) UIView *(^topLeft_)(CGRect);//左上距离父控件、宽高固定
