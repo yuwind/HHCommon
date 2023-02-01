@@ -3,6 +3,6 @@ Common tools
 
 ```objc
 target 'MyApp' do
-  pod 'HHCommon', '~> 1.0.4'
+  pod 'HHCommon', '~> 1.0.5'
 end
 ```

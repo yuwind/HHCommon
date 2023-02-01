@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)hh_second;
 - (NSInteger)hh_week;
 - (NSString *)hh_toString;//yyyyMMdd
+- (NSString *)hh_toStringWithEnLocale;//yyyyMMdd
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat;
 - (NSInteger)hh_dayCountSinceDate:(NSDate *)date;
 - (NSInteger)hh_daysInMonth;

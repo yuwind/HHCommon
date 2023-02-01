@@ -98,6 +98,13 @@ NSCalendar * calendarInstance(void) {
     return [self hh_stringWithDateFormat:mDefaultDateFormat];
 }
 
+- (NSString *)hh_toStringWithEnLocale {
+    NSDateFormatter *formatter = dateFormatterInstance();
+    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    formatter.dateFormat = mDefaultDateFormat;
+    return [formatter stringFromDate:self];
+}
+
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat {
     if (dateFormat.length == 0) {
         return nil;
