@@ -55,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (HHDate)
 
 - (NSDate *)hh_toDate;//yyyyMMdd
+- (NSDate *)hh_toDateWithEnLocale;//yyyyMMdd
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat;
 
 @end

@@ -260,6 +260,13 @@ NSCalendar * calendarInstance(void) {
     return [self hh_dateWithDateFormat:mDefaultDateFormat];
 }
 
+- (NSDate *)hh_toDateWithEnLocale {
+    NSDateFormatter *formatter = dateFormatterInstance();
+    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    formatter.dateFormat = mDefaultDateFormat;
+    return [formatter dateFromString:self];
+}
+
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat {
     if (dateFormat.length == 0) {
         return nil;
