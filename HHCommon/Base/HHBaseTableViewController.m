@@ -35,11 +35,7 @@
     self.tableView.delegate = self;
     self.tableView.estimatedRowHeight = 100.f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    if (@available(iOS 11.0, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }else{
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     for (Class class in [self registerReusableCell]) {
         [self.tableView registerClass:class forCellReuseIdentifier:NSStringFromClass(class)];
     }
