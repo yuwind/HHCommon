@@ -56,6 +56,8 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
 @property (nonatomic, assign, readonly) UIView *(^leftInset_)(CGFloat);
 @property (nonatomic, assign, readonly) UIView *(^bottomInset_)(CGFloat);
 @property (nonatomic, assign, readonly) UIView *(^rightInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^widthInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^heightInset_)(CGFloat);
 @property (nonatomic, assign, readonly) UIView *(^centerXInset_)(CGFloat);
 @property (nonatomic, assign, readonly) UIView *(^centerYInset_)(CGFloat);
 

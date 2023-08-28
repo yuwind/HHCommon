@@ -436,6 +436,20 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
+- (UIView *(^)(CGFloat))widthInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.widt_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))heightInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.heit_.offset_(offset).on_();
+        return self;
+    };
+}
+
 - (UIView *(^)(CGFloat))centerXInset_ {
     return ^UIView *(CGFloat offset) {
         self.centX_.offset_(offset).on_();
