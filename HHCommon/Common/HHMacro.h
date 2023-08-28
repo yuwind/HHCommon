@@ -19,13 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 #define mIs4_7InchScreen (mScreenHeight == 667)
 #define mIs5_5InchScreen (mScreenHeight == 736)
 #define mIs5_8InchScreen (mScreenHeight == 812 && mScreenWidth == 375)
-#define mIs6_1InchScreen ((mScreenHeight == 896 && mScreenWidth == 414) || (mScreenHeight == 844 && mScreenWidth == 390))
+#define mIs6_1InchScreen ((mScreenHeight == 896 && mScreenWidth == 414) || (mScreenHeight == 844 && mScreenWidth == 390) || (mScreenHeight == 852 && mScreenWidth == 393))
 #define mIs6_5InchScreen (mScreenHeight == 896 && mScreenWidth == 414)
 #define mIs5_4InchScreen (mScreenHeight == 812 && mScreenWidth == 375)
-#define mIs6_7InchScreen (mScreenHeight == 926 && mScreenWidth == 428)
+#define mIs6_7InchScreen ((mScreenHeight == 926 && mScreenWidth == 428) || (mScreenHeight == 932 && mScreenWidth == 430))
 
 #define mIsLargeThan4Inch (mScreenWidth >= 375)
-#define mAdapter(value) ((value) * MIN(mScreenWidth, mScreenHeight) / 375.0f)
+#define mAdapter(value) floor((value) * MIN(mScreenWidth, mScreenHeight) / 375.0f)
 
 #define mAvailableWindow ({UIWindow *window = nil;\
 if ([UIApplication.sharedApplication.delegate respondsToSelector:@selector(window)]) {\

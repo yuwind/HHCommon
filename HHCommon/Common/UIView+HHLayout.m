@@ -408,7 +408,91 @@ static NSLayoutRelation relation_ = NSLayoutRelationEqual;
     };
 }
 
-- (UIView *(^)(CGSize))frozenSize {
+- (UIView *(^)(CGFloat))topInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.top_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))leftInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.left_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))bottomInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.bott_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))rightInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.righ_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))centerXInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.centX_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))centerYInset_ {
+    return ^UIView *(CGFloat offset) {
+        self.centY_.offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))topOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.top_.equalTo(view.bott_).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))leftOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.left_.equalTo(view.righ_).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))bottomOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.bott_.equalTo(view.top_).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))rightOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.righ_.equalTo(view.left_).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))centerXOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.centX_.equalTo(view).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *, CGFloat))centerYOffset_ {
+    return ^UIView *(UIView *view, CGFloat offset) {
+        self.centY_.equalTo(view).offset_(offset).on_();
+        return self;
+    };
+}
+
+- (UIView *(^)(CGSize))sizeInset_ {
     return ^UIView *(CGSize size) {
         self.size_.offsets_(@(size.width),@(size.height),nil).on_();
         return self;

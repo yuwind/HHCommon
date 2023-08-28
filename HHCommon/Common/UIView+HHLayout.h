@@ -52,7 +52,21 @@ typedef NS_ENUM(NSUInteger, HHContentPriority) {
 /**
  快速添加约束
  */
-@property (nonatomic, assign, readonly) UIView *(^frozenSize)(CGSize);//size
+@property (nonatomic, assign, readonly) UIView *(^topInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^leftInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^bottomInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^rightInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^centerXInset_)(CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^centerYInset_)(CGFloat);
+
+@property (nonatomic, assign, readonly) UIView *(^topOffset_)(UIView *, CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^leftOffset_)(UIView *, CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^bottomOffset_)(UIView *, CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^rightOffset_)(UIView *, CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^centerXOffset_)(UIView *, CGFloat);
+@property (nonatomic, assign, readonly) UIView *(^centerYOffset_)(UIView *, CGFloat);
+
+@property (nonatomic, assign, readonly) UIView *(^sizeInset_)(CGSize);//size
 @property (nonatomic, assign, readonly) UIView *(^leftRightInset)(CGFloat);//左右内边距
 @property (nonatomic, assign, readonly) UIView *(^topBottomInset)(CGFloat);//上下内边距
 @property (nonatomic, assign, readonly) UIView *(^topLeft_)(CGRect);//左上距离父控件、宽高固定
