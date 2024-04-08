@@ -106,10 +106,15 @@ NSCalendar * calendarInstance(void) {
 }
 
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat {
+    return [self hh_stringWithDateFormat:dateFormat locale:[NSLocale currentLocale]];
+}
+
+- (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale {
     if (dateFormat.length == 0) {
         return nil;
     }
     NSDateFormatter *formatter = dateFormatterInstance();
+    formatter.locale = locale;
     formatter.dateFormat = dateFormat;
     return [formatter stringFromDate:self];
 }
@@ -268,10 +273,15 @@ NSCalendar * calendarInstance(void) {
 }
 
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat {
+    return [self hh_dateWithDateFormat:dateFormat locale:[NSLocale currentLocale]];
+}
+
+- (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale {
     if (dateFormat.length == 0) {
         return nil;
     }
     NSDateFormatter *formatter = dateFormatterInstance();
+    formatter.locale = locale;
     formatter.dateFormat = dateFormat;
     return [formatter dateFromString:self];
 }

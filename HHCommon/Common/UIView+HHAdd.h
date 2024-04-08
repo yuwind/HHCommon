@@ -116,6 +116,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)hh_addClickAction:(void (^_Nullable)(id sender))block;
 
+/**
+ 添加自定义视图
+ 
+ @param cls 自定义类
+ @param callback 设置imageView属性
+ @return 返回自定义对象
+ */
+- (UIView *)hh_addClass:(Class)cls callback:(void(^)(id view))callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

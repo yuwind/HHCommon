@@ -274,4 +274,13 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     return dictionaryM;
 }
 
+- (UIView *)hh_addClass:(Class)cls callback:(void(^)(id view))callback {
+    UIView *view = [cls new];
+    [self addSubview:view];
+    if (callback) {
+        callback(view);
+    }
+    return view;
+}
+
 @end
