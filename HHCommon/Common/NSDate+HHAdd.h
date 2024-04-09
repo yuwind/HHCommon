@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)hh_toString;//yyyyMMdd
 - (NSString *)hh_toStringWithEnLocale;//yyyyMMdd
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat;
+- (NSString *)hh_stringWithEnLocaleDateFormat:(NSString *)dateFormat;
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale;
 - (NSInteger)hh_dayCountSinceDate:(NSDate *)date;
 - (NSInteger)hh_daysInMonth;
@@ -58,6 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDate *)hh_toDate;//yyyyMMdd
 - (NSDate *)hh_toDateWithEnLocale;//yyyyMMdd
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat;
+- (NSDate *)hh_dateWithEnLocaleDateFormat:(NSString *)dateFormat;
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale;
 
 @end
