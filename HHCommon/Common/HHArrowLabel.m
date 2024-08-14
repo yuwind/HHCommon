@@ -21,6 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.shouldShowCorner = true;
+        self.rate = 0.5;
         [self setupSubviews];
         [self setupConstraints];
     }
@@ -32,6 +33,24 @@
     if (self.shouldShowCorner) {
         self.contentView.layer.cornerRadius = self.contentView.frame.size.height/2;
     }
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    _cornerRadius = cornerRadius;
+    if (cornerRadius > 0) {
+        self.shouldShowCorner = false;
+        self.contentView.layer.cornerRadius = cornerRadius;
+    } else {
+        self.shouldShowCorner = true;
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+    }
+}
+
+- (void)setShouldShowCorner:(BOOL)shouldShowCorner {
+    _shouldShowCorner = shouldShowCorner;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 - (void)setFillColor:(UIColor *)fillColor {

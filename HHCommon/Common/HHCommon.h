@@ -21,6 +21,7 @@
 #import "HHMacro.h"
 #import "HHButton.h"
 #import "HHArrowView.h"
+#import "HHArrowLabel.h"
 #import "HHSafeTimer.h"
 #import "HHFileManager.h"
 #import "HHCommonMethod.h"
