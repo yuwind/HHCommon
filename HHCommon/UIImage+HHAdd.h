@@ -142,6 +142,9 @@ typedef NS_ENUM(NSUInteger, HHGradientType) {
 /// @param circular Whether the resulting image is returned as a square or a circle
 - (nonnull UIImage *)croppedImageWithFrame:(CGRect)frame angle:(NSInteger)angle circularClip:(BOOL)circular;
 
+/// change image with color
+- (UIImage *)hh_imageWithRenderColor:(UIColor *)color;
+
 @end
 
 NS_ASSUME_NONNULL_END

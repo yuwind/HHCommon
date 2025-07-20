@@ -42,27 +42,37 @@ NSCalendar * calendarInstance(void) {
     return [[self dateByAddingTimeInterval:-mOneDaySeconds] hh_isToday];
 }
 
+- (BOOL)hh_isPast {
+    NSDate *zeroDate = [[NSDate date] hh_dayWithoutTime];
+    return [zeroDate timeIntervalSinceDate:self] > 0;
+}
+
+- (BOOL)hh_isFuture {
+    NSDate *nextZeroDate = [[[NSDate date] hh_dayOffset:1] hh_dayWithoutTime];
+    return [self timeIntervalSinceDate:nextZeroDate] >= 0;
+}
+
 - (BOOL)hh_isSameDay:(NSDate *)date {
     return ([date hh_year] == [self hh_year]) && ([date hh_month] == [self hh_month]) && ([date hh_day] == [self hh_day]);
 }
 
-- (BOOL)hh_isFirstDateInMonth {
-    NSDate *firstDate = [self hh_firstDateInMonth];
+- (BOOL)hh_isFirstDayInMonth {
+    NSDate *firstDate = [self hh_firstDayInMonth];
     return [self hh_isSameDay:firstDate];
 }
 
-- (BOOL)hh_isLastDateInMonth {
-    NSDate *lastDate = [self hh_lastDateInMonth];
+- (BOOL)hh_isLastDayInMonth {
+    NSDate *lastDate = [self hh_lastDayInMonth];
     return [self hh_isSameDay:lastDate];
 }
 
-- (BOOL)hh_isFirstDateInWeek {
-    NSDate *firstDate = [self hh_firstDateInWeek];
+- (BOOL)hh_isFirstDayInWeek {
+    NSDate *firstDate = [self hh_firstDayInWeek];
     return [self hh_isSameDay:firstDate];
 }
 
-- (BOOL)hh_isLastDateInWeek {
-    NSDate *lastDate = [self hh_lastDateInWeek];
+- (BOOL)hh_isLastDayInWeek {
+    NSDate *lastDate = [self hh_lastDayInWeek];
     return [self hh_isSameDay:lastDate];
 }
 
@@ -106,19 +116,10 @@ NSCalendar * calendarInstance(void) {
 }
 
 - (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat {
-    return [self hh_stringWithDateFormat:dateFormat locale:[NSLocale currentLocale]];
-}
-
-- (NSString *)hh_stringWithEnLocaleDateFormat:(NSString *)dateFormat {
-    return [self hh_stringWithDateFormat:dateFormat locale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-}
-
-- (NSString *)hh_stringWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale {
     if (dateFormat.length == 0) {
         return nil;
     }
     NSDateFormatter *formatter = dateFormatterInstance();
-    formatter.locale = locale;
     formatter.dateFormat = dateFormat;
     return [formatter stringFromDate:self];
 }
@@ -170,13 +171,13 @@ NSCalendar * calendarInstance(void) {
     return range.length;
 }
 
-- (NSDate *)hh_dateWithoutTime {
+- (NSDate *)hh_dayWithoutTime {
     NSCalendar *calendar = calendarInstance();
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
     return [calendar dateFromComponents:components];
 }
 
-- (NSDate *)hh_firstDateInWeek {
+- (NSDate *)hh_firstDayInWeek {
     NSCalendar *calendar = calendarInstance();
     NSDate *beginningOfWeek = nil;
     BOOL isSuccess = [calendar rangeOfUnit:NSCalendarUnitWeekOfMonth startDate:&beginningOfWeek interval:NULL forDate:self];
@@ -186,19 +187,19 @@ NSCalendar * calendarInstance(void) {
     return nil;
 }
 
-- (NSDate *)hh_lastDateInWeek {
-    NSDate *firstDate = [self hh_firstDateInWeek];
+- (NSDate *)hh_lastDayInWeek {
+    NSDate *firstDate = [self hh_firstDayInWeek];
     return [firstDate dateByAddingTimeInterval:6*mOneDaySeconds];
 }
 
-- (NSDate *)hh_firstDateInMonth {
+- (NSDate *)hh_firstDayInMonth {
     NSCalendar *calendar = calendarInstance();
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
     components.day = 1;
     return [calendar dateFromComponents:components];
 }
 
-- (NSDate *)hh_lastDateInMonth {
+- (NSDate *)hh_lastDayInMonth {
     NSCalendar *calendar = calendarInstance();
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
     components.month++;
@@ -213,7 +214,7 @@ NSCalendar * calendarInstance(void) {
     return [calendar dateByAddingComponents:offsetComponents toDate:self options:0];
 }
 
-- (NSDate *)hh_dateOffset:(NSInteger)offset {
+- (NSDate *)hh_dayOffset:(NSInteger)offset {
     NSCalendar *calendar = calendarInstance();
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setDay:offset];
@@ -277,19 +278,10 @@ NSCalendar * calendarInstance(void) {
 }
 
 - (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat {
-    return [self hh_dateWithDateFormat:dateFormat locale:[NSLocale currentLocale]];
-}
-
-- (NSDate *)hh_dateWithEnLocaleDateFormat:(NSString *)dateFormat {
-    return [self hh_dateWithDateFormat:dateFormat locale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-}
-
-- (NSDate *)hh_dateWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale {
     if (dateFormat.length == 0) {
         return nil;
     }
     NSDateFormatter *formatter = dateFormatterInstance();
-    formatter.locale = locale;
     formatter.dateFormat = dateFormat;
     return [formatter dateFromString:self];
 }

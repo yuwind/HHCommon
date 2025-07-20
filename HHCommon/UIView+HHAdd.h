@@ -117,13 +117,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hh_addClickAction:(void (^_Nullable)(id sender))block;
 
 /**
- 添加自定义视图
+ 自定义动画
  
- @param cls 自定义类
- @param callback 设置imageView属性
- @return 返回自定义对象
+ @param animations 动画事件
  */
-- (UIView *)hh_addClass:(Class)cls callback:(void(^)(id view))callback;
++ (void)hh_animateWithDuration:(NSTimeInterval)duration controlPoint1:(CGPoint)point1 controlPoint2:(CGPoint)point2 animations:(void (^)(void))animations;
+
+/**
+ 自定义动画
+ @param point1 控制点1
+ @param point2 控制点2
+ @param animations 动画事件
+ @param completion 结束回调
+ */
++ (void)hh_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay controlPoint1:(CGPoint)point1 controlPoint2:(CGPoint)point2 animations:(void (^)(void))animations completion:(void (^ __nullable)(UIViewAnimatingPosition finalPosition))completion;
 
 @end
 

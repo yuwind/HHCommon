@@ -274,13 +274,17 @@ static char * const kTextViewMaxChar          = "kTextViewMaxChar";
     return dictionaryM;
 }
 
-- (UIView *)hh_addClass:(Class)cls callback:(void(^)(id view))callback {
-    UIView *view = [cls new];
-    [self addSubview:view];
-    if (callback) {
-        callback(view);
-    }
-    return view;
++ (void)hh_animateWithDuration:(NSTimeInterval)duration controlPoint1:(CGPoint)point1 controlPoint2:(CGPoint)point2 animations:(void (^)(void))animations {
+    [self hh_animateWithDuration:duration delay:0 controlPoint1:point1 controlPoint2:point2 animations:animations completion:nil];
+}
+
++ (void)hh_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay controlPoint1:(CGPoint)point1 controlPoint2:(CGPoint)point2 animations:(void (^)(void))animations completion:(void (^ __nullable)(UIViewAnimatingPosition finalPosition))completion {
+    UIViewPropertyAnimator *animator = [[UIViewPropertyAnimator alloc] initWithDuration:duration controlPoint1:point1 controlPoint2:point2 animations:animations];
+    [animator addCompletion:completion];
+    [animator startAnimationAfterDelay:delay];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((duration+delay) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [animator duration];
+    });
 }
 
 @end
