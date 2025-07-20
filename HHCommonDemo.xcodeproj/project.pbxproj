@@ -7,52 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50355D39282DEAD5005E1B12 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50355D38282DEAD5005E1B12 /* DemoTableViewController.m */; };
-		50355D3C282DEF57005E1B12 /* DemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50355D3B282DEF57005E1B12 /* DemoTableViewCell.m */; };
 		5066DB9F281D633B00461CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066DB9E281D633B00461CD1 /* AppDelegate.m */; };
 		5066DBA5281D633B00461CD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066DBA4281D633B00461CD1 /* ViewController.m */; };
 		5066DBA8281D633B00461CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBA6281D633B00461CD1 /* Main.storyboard */; };
 		5066DBAA281D633E00461CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBA9281D633E00461CD1 /* Assets.xcassets */; };
 		5066DBAD281D633E00461CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066DBAB281D633E00461CD1 /* LaunchScreen.storyboard */; };
 		5066DBB0281D633E00461CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066DBAF281D633E00461CD1 /* main.m */; };
-		508E939B28C638AD00C560CF /* UIView+HHArrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E939928C638AC00C560CF /* UIView+HHArrange.m */; };
-		FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */; };
-		FE34C5952A9D80C100B5B0D7 /* HHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FE34C5942A9D80C100B5B0D7 /* HHButton.m */; };
-		FE662F7228446BE50030FFA2 /* HHGradientLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */; };
-		FE85EAF22C3B917F00C8EF51 /* HHArrowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85EAF12C3B917F00C8EF51 /* HHArrowLabel.m */; };
-		FEBB76D42838802B0062D595 /* NSObject+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */; };
-		FEBB76D52838802B0062D595 /* UIView+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76AA2838802B0062D595 /* UIView+HHAdd.m */; };
-		FEBB76D62838802B0062D595 /* NSNumber+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76AB2838802B0062D595 /* NSNumber+HHAdd.m */; };
-		FEBB76D72838802B0062D595 /* HHUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B02838802B0062D595 /* HHUserDefaults.m */; };
-		FEBB76D82838802B0062D595 /* HHSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B12838802B0062D595 /* HHSafeTimer.m */; };
-		FEBB76D92838802B0062D595 /* UIImage+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B42838802B0062D595 /* UIImage+HHAdd.m */; };
-		FEBB76DA2838802B0062D595 /* NSString+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B52838802B0062D595 /* NSString+HHAdd.m */; };
-		FEBB76DB2838802B0062D595 /* HHGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B72838802B0062D595 /* HHGradientLayerView.m */; };
-		FEBB76DC2838802B0062D595 /* HHDisableQuickClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76B82838802B0062D595 /* HHDisableQuickClickButton.m */; };
-		FEBB76DD2838802B0062D595 /* UIView+HHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76BB2838802B0062D595 /* UIView+HHLayout.m */; };
-		FEBB76DE2838802B0062D595 /* UIView+HHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76BC2838802B0062D595 /* UIView+HHFrame.m */; };
-		FEBB76DF2838802B0062D595 /* NSDictionary+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76BD2838802B0062D595 /* NSDictionary+HHSafe.m */; };
-		FEBB76E02838802B0062D595 /* HHEnableInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76BF2838802B0062D595 /* HHEnableInsetsLabel.m */; };
-		FEBB76E12838802B0062D595 /* NSMutableDictionary+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C02838802B0062D595 /* NSMutableDictionary+HHSafe.m */; };
-		FEBB76E22838802B0062D595 /* HHCrashCaughtHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C32838802B0062D595 /* HHCrashCaughtHandler.m */; };
-		FEBB76E32838802B0062D595 /* NSMutableArray+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C42838802B0062D595 /* NSMutableArray+HHSafe.m */; };
-		FEBB76E42838802B0062D595 /* NSArray+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C62838802B0062D595 /* NSArray+HHSafe.m */; };
-		FEBB76E52838802B0062D595 /* HHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C72838802B0062D595 /* HHFileManager.m */; };
-		FEBB76E62838802B0062D595 /* HHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76C92838802B0062D595 /* HHBaseTableViewController.m */; };
-		FEBB76E72838802B0062D595 /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76CB2838802B0062D595 /* HHBaseViewController.m */; };
-		FEBB76E82838802B0062D595 /* HHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76CC2838802B0062D595 /* HHBaseTableViewCell.m */; };
-		FEBB76E92838802B0062D595 /* BaseBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEBB76CE2838802B0062D595 /* BaseBundle.bundle */; };
-		FEBB76EA2838802B0062D595 /* HHBaseTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */; };
-		FEBB76EB2838802B0062D595 /* HHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */; };
-		FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */; };
-		FEE81DCA28E5358900C0F768 /* HHArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE81DC928E5358900C0F768 /* HHArrowView.m */; };
+		CAB6DDCD2E2CEF8F0072ED9B /* UIView+HHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDC82E2CEF8F0072ED9B /* UIView+HHLayout.m */; };
+		CAB6DDCE2E2CEF8F0072ED9B /* HHGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDA92E2CEF8F0072ED9B /* HHGradientLayerView.m */; };
+		CAB6DDCF2E2CEF8F0072ED9B /* UIImage+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDC02E2CEF8F0072ED9B /* UIImage+HHAdd.m */; };
+		CAB6DDD02E2CEF8F0072ED9B /* NSObject+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDBC2E2CEF8F0072ED9B /* NSObject+HHAdd.m */; };
+		CAB6DDD12E2CEF8F0072ED9B /* UIView+HHArrange.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDC42E2CEF8F0072ED9B /* UIView+HHArrange.m */; };
+		CAB6DDD22E2CEF8F0072ED9B /* HHGradientLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDA72E2CEF8F0072ED9B /* HHGradientLayerButton.m */; };
+		CAB6DDD32E2CEF8F0072ED9B /* HHArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DD972E2CEF8F0072ED9B /* HHArrowView.m */; };
+		CAB6DDD42E2CEF8F0072ED9B /* HHSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDAC2E2CEF8F0072ED9B /* HHSafeTimer.m */; };
+		CAB6DDD52E2CEF8F0072ED9B /* NSDate+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDB22E2CEF8F0072ED9B /* NSDate+HHAdd.m */; };
+		CAB6DDD62E2CEF8F0072ED9B /* HHFormatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDA52E2CEF8F0072ED9B /* HHFormatUtil.m */; };
+		CAB6DDD72E2CEF8F0072ED9B /* NSMutableArray+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDB62E2CEF8F0072ED9B /* NSMutableArray+HHSafe.m */; };
+		CAB6DDD82E2CEF8F0072ED9B /* HHDeallocMediumObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DD9D2E2CEF8F0072ED9B /* HHDeallocMediumObject.m */; };
+		CAB6DDD92E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDB82E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.m */; };
+		CAB6DDDA2E2CEF8F0072ED9B /* HHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDA32E2CEF8F0072ED9B /* HHFileManager.m */; };
+		CAB6DDDB2E2CEF8F0072ED9B /* HHArrowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DD952E2CEF8F0072ED9B /* HHArrowLabel.m */; };
+		CAB6DDDC2E2CEF8F0072ED9B /* HHDisableQuickClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DD9F2E2CEF8F0072ED9B /* HHDisableQuickClickButton.m */; };
+		CAB6DDDD2E2CEF8F0072ED9B /* NSArray+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDB02E2CEF8F0072ED9B /* NSArray+HHSafe.m */; };
+		CAB6DDDE2E2CEF8F0072ED9B /* HHEnableInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDA12E2CEF8F0072ED9B /* HHEnableInsetsLabel.m */; };
+		CAB6DDDF2E2CEF8F0072ED9B /* UIView+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDC22E2CEF8F0072ED9B /* UIView+HHAdd.m */; };
+		CAB6DDE02E2CEF8F0072ED9B /* UIWindow+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDCC2E2CEF8F0072ED9B /* UIWindow+HHAdd.m */; };
+		CAB6DDE12E2CEF8F0072ED9B /* NSNumber+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDBA2E2CEF8F0072ED9B /* NSNumber+HHAdd.m */; };
+		CAB6DDE22E2CEF8F0072ED9B /* HHUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDAE2E2CEF8F0072ED9B /* HHUserDefaults.m */; };
+		CAB6DDE32E2CEF8F0072ED9B /* HHCrashCaughtHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DD9B2E2CEF8F0072ED9B /* HHCrashCaughtHandler.m */; };
+		CAB6DDE42E2CEF8F0072ED9B /* UIViewController+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDCA2E2CEF8F0072ED9B /* UIViewController+HHAdd.m */; };
+		CAB6DDE52E2CEF8F0072ED9B /* NSDictionary+HHSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDB42E2CEF8F0072ED9B /* NSDictionary+HHSafe.m */; };
+		CAB6DDE62E2CEF8F0072ED9B /* UIView+HHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDC62E2CEF8F0072ED9B /* UIView+HHFrame.m */; };
+		CAB6DDE72E2CEF8F0072ED9B /* NSString+HHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6DDBE2E2CEF8F0072ED9B /* NSString+HHAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50355D37282DEAD5005E1B12 /* DemoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
-		50355D38282DEAD5005E1B12 /* DemoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
-		50355D3A282DEF57005E1B12 /* DemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTableViewCell.h; sourceTree = "<group>"; };
-		50355D3B282DEF57005E1B12 /* DemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewCell.m; sourceTree = "<group>"; };
 		5066DB9A281D633B00461CD1 /* HHCommonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHCommonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5066DB9D281D633B00461CD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5066DB9E281D633B00461CD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,70 +53,63 @@
 		5066DBAC281D633E00461CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5066DBAE281D633E00461CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5066DBAF281D633E00461CD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		508E939928C638AC00C560CF /* UIView+HHArrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHArrange.m"; sourceTree = "<group>"; };
-		508E939A28C638AC00C560CF /* UIView+HHArrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHArrange.h"; sourceTree = "<group>"; };
-		FE0678F1287FB93A0041E6F5 /* HHDeallocMediumObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDeallocMediumObject.h; sourceTree = "<group>"; };
-		FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDeallocMediumObject.m; sourceTree = "<group>"; };
-		FE34C5932A9D80C100B5B0D7 /* HHButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHButton.h; sourceTree = "<group>"; };
-		FE34C5942A9D80C100B5B0D7 /* HHButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHButton.m; sourceTree = "<group>"; };
-		FE662F7028446BE50030FFA2 /* HHGradientLayerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerButton.h; sourceTree = "<group>"; };
-		FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHGradientLayerButton.m; sourceTree = "<group>"; };
-		FE85EAF02C3B917F00C8EF51 /* HHArrowLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArrowLabel.h; sourceTree = "<group>"; };
-		FE85EAF12C3B917F00C8EF51 /* HHArrowLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArrowLabel.m; sourceTree = "<group>"; };
-		FEBB76A12838802B0062D595 /* HHDisableQuickClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHDisableQuickClickButton.h; sourceTree = "<group>"; };
-		FEBB76A22838802B0062D595 /* HHGradientLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerView.h; sourceTree = "<group>"; };
-		FEBB76A32838802B0062D595 /* NSString+HHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HHAdd.m"; sourceTree = "<group>"; };
-		FEBB76A52838802B0062D595 /* UIImage+HHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB76A62838802B0062D595 /* NSDictionary+HHSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HHSafe.h"; sourceTree = "<group>"; };
-		FEBB76A72838802B0062D595 /* HHCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCommon.h; sourceTree = "<group>"; };
-		FEBB76A82838802B0062D595 /* UIView+HHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHLayout.h"; sourceTree = "<group>"; };
-		FEBB76A92838802B0062D595 /* UIView+HHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHFrame.h"; sourceTree = "<group>"; };
-		FEBB76AA2838802B0062D595 /* UIView+HHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHAdd.m"; sourceTree = "<group>"; };
-		FEBB76AB2838802B0062D595 /* NSNumber+HHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HHAdd.m"; sourceTree = "<group>"; };
-		FEBB76AC2838802B0062D595 /* HHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHFileManager.h; sourceTree = "<group>"; };
-		FEBB76AD2838802B0062D595 /* NSArray+HHSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HHSafe.h"; sourceTree = "<group>"; };
-		FEBB76AE2838802B0062D595 /* HHCrashCaughtHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCrashCaughtHandler.h; sourceTree = "<group>"; };
-		FEBB76AF2838802B0062D595 /* NSMutableArray+HHSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HHSafe.h"; sourceTree = "<group>"; };
-		FEBB76B02838802B0062D595 /* HHUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHUserDefaults.m; sourceTree = "<group>"; };
-		FEBB76B12838802B0062D595 /* HHSafeTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSafeTimer.m; sourceTree = "<group>"; };
-		FEBB76B22838802B0062D595 /* NSMutableDictionary+HHSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+HHSafe.h"; sourceTree = "<group>"; };
-		FEBB76B32838802B0062D595 /* HHEnableInsetsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHEnableInsetsLabel.h; sourceTree = "<group>"; };
-		FEBB76B42838802B0062D595 /* UIImage+HHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HHAdd.m"; sourceTree = "<group>"; };
-		FEBB76B52838802B0062D595 /* NSString+HHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HHAdd.m"; sourceTree = "<group>"; };
-		FEBB76B62838802B0062D595 /* NSObject+HHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB76B72838802B0062D595 /* HHGradientLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHGradientLayerView.m; sourceTree = "<group>"; };
-		FEBB76B82838802B0062D595 /* HHDisableQuickClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHDisableQuickClickButton.m; sourceTree = "<group>"; };
-		FEBB76B92838802B0062D595 /* HHMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMacro.h; sourceTree = "<group>"; };
-		FEBB76BA2838802B0062D595 /* UIView+HHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB76BB2838802B0062D595 /* UIView+HHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHLayout.m"; sourceTree = "<group>"; };
-		FEBB76BC2838802B0062D595 /* UIView+HHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHFrame.m"; sourceTree = "<group>"; };
-		FEBB76BD2838802B0062D595 /* NSDictionary+HHSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HHSafe.m"; sourceTree = "<group>"; };
-		FEBB76BE2838802B0062D595 /* NSNumber+HHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB76BF2838802B0062D595 /* HHEnableInsetsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHEnableInsetsLabel.m; sourceTree = "<group>"; };
-		FEBB76C02838802B0062D595 /* NSMutableDictionary+HHSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+HHSafe.m"; sourceTree = "<group>"; };
-		FEBB76C12838802B0062D595 /* HHUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHUserDefaults.h; sourceTree = "<group>"; };
-		FEBB76C22838802B0062D595 /* HHSafeTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSafeTimer.h; sourceTree = "<group>"; };
-		FEBB76C32838802B0062D595 /* HHCrashCaughtHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCrashCaughtHandler.m; sourceTree = "<group>"; };
-		FEBB76C42838802B0062D595 /* NSMutableArray+HHSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HHSafe.m"; sourceTree = "<group>"; };
-		FEBB76C52838802B0062D595 /* HHCommonMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCommonMethod.h; sourceTree = "<group>"; };
-		FEBB76C62838802B0062D595 /* NSArray+HHSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HHSafe.m"; sourceTree = "<group>"; };
-		FEBB76C72838802B0062D595 /* HHFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHFileManager.m; sourceTree = "<group>"; };
-		FEBB76C92838802B0062D595 /* HHBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseTableViewController.m; sourceTree = "<group>"; };
-		FEBB76CA2838802B0062D595 /* HHBaseTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseTableViewCellModel.h; sourceTree = "<group>"; };
-		FEBB76CB2838802B0062D595 /* HHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
-		FEBB76CC2838802B0062D595 /* HHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseTableViewCell.m; sourceTree = "<group>"; };
-		FEBB76CD2838802B0062D595 /* HHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseNavigationController.h; sourceTree = "<group>"; };
-		FEBB76CE2838802B0062D595 /* BaseBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BaseBundle.bundle; sourceTree = "<group>"; };
-		FEBB76CF2838802B0062D595 /* HHBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseTableViewController.h; sourceTree = "<group>"; };
-		FEBB76D02838802B0062D595 /* HHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
-		FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseTableViewCellModel.m; sourceTree = "<group>"; };
-		FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseNavigationController.m; sourceTree = "<group>"; };
-		FEBB76D32838802B0062D595 /* HHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseTableViewCell.h; sourceTree = "<group>"; };
-		FEBB988B286005B40098ECD4 /* NSDate+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HHAdd.h"; sourceTree = "<group>"; };
-		FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HHAdd.m"; sourceTree = "<group>"; };
-		FEE81DC828E5358900C0F768 /* HHArrowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArrowView.h; sourceTree = "<group>"; };
-		FEE81DC928E5358900C0F768 /* HHArrowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArrowView.m; sourceTree = "<group>"; };
+		CAB6DD942E2CEF8F0072ED9B /* HHArrowLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArrowLabel.h; sourceTree = "<group>"; };
+		CAB6DD952E2CEF8F0072ED9B /* HHArrowLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArrowLabel.m; sourceTree = "<group>"; };
+		CAB6DD962E2CEF8F0072ED9B /* HHArrowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArrowView.h; sourceTree = "<group>"; };
+		CAB6DD972E2CEF8F0072ED9B /* HHArrowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArrowView.m; sourceTree = "<group>"; };
+		CAB6DD982E2CEF8F0072ED9B /* HHCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCommon.h; sourceTree = "<group>"; };
+		CAB6DD992E2CEF8F0072ED9B /* HHCommonMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCommonMethod.h; sourceTree = "<group>"; };
+		CAB6DD9A2E2CEF8F0072ED9B /* HHCrashCaughtHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCrashCaughtHandler.h; sourceTree = "<group>"; };
+		CAB6DD9B2E2CEF8F0072ED9B /* HHCrashCaughtHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCrashCaughtHandler.m; sourceTree = "<group>"; };
+		CAB6DD9C2E2CEF8F0072ED9B /* HHDeallocMediumObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDeallocMediumObject.h; sourceTree = "<group>"; };
+		CAB6DD9D2E2CEF8F0072ED9B /* HHDeallocMediumObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDeallocMediumObject.m; sourceTree = "<group>"; };
+		CAB6DD9E2E2CEF8F0072ED9B /* HHDisableQuickClickButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDisableQuickClickButton.h; sourceTree = "<group>"; };
+		CAB6DD9F2E2CEF8F0072ED9B /* HHDisableQuickClickButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDisableQuickClickButton.m; sourceTree = "<group>"; };
+		CAB6DDA02E2CEF8F0072ED9B /* HHEnableInsetsLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHEnableInsetsLabel.h; sourceTree = "<group>"; };
+		CAB6DDA12E2CEF8F0072ED9B /* HHEnableInsetsLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHEnableInsetsLabel.m; sourceTree = "<group>"; };
+		CAB6DDA22E2CEF8F0072ED9B /* HHFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHFileManager.h; sourceTree = "<group>"; };
+		CAB6DDA32E2CEF8F0072ED9B /* HHFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHFileManager.m; sourceTree = "<group>"; };
+		CAB6DDA42E2CEF8F0072ED9B /* HHFormatUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHFormatUtil.h; sourceTree = "<group>"; };
+		CAB6DDA52E2CEF8F0072ED9B /* HHFormatUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHFormatUtil.m; sourceTree = "<group>"; };
+		CAB6DDA62E2CEF8F0072ED9B /* HHGradientLayerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerButton.h; sourceTree = "<group>"; };
+		CAB6DDA72E2CEF8F0072ED9B /* HHGradientLayerButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHGradientLayerButton.m; sourceTree = "<group>"; };
+		CAB6DDA82E2CEF8F0072ED9B /* HHGradientLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGradientLayerView.h; sourceTree = "<group>"; };
+		CAB6DDA92E2CEF8F0072ED9B /* HHGradientLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHGradientLayerView.m; sourceTree = "<group>"; };
+		CAB6DDAA2E2CEF8F0072ED9B /* HHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHMacro.h; sourceTree = "<group>"; };
+		CAB6DDAB2E2CEF8F0072ED9B /* HHSafeTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHSafeTimer.h; sourceTree = "<group>"; };
+		CAB6DDAC2E2CEF8F0072ED9B /* HHSafeTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHSafeTimer.m; sourceTree = "<group>"; };
+		CAB6DDAD2E2CEF8F0072ED9B /* HHUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHUserDefaults.h; sourceTree = "<group>"; };
+		CAB6DDAE2E2CEF8F0072ED9B /* HHUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHUserDefaults.m; sourceTree = "<group>"; };
+		CAB6DDAF2E2CEF8F0072ED9B /* NSArray+HHSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+HHSafe.h"; sourceTree = "<group>"; };
+		CAB6DDB02E2CEF8F0072ED9B /* NSArray+HHSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HHSafe.m"; sourceTree = "<group>"; };
+		CAB6DDB12E2CEF8F0072ED9B /* NSDate+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDB22E2CEF8F0072ED9B /* NSDate+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDB32E2CEF8F0072ED9B /* NSDictionary+HHSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HHSafe.h"; sourceTree = "<group>"; };
+		CAB6DDB42E2CEF8F0072ED9B /* NSDictionary+HHSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HHSafe.m"; sourceTree = "<group>"; };
+		CAB6DDB52E2CEF8F0072ED9B /* NSMutableArray+HHSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HHSafe.h"; sourceTree = "<group>"; };
+		CAB6DDB62E2CEF8F0072ED9B /* NSMutableArray+HHSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HHSafe.m"; sourceTree = "<group>"; };
+		CAB6DDB72E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+HHSafe.h"; sourceTree = "<group>"; };
+		CAB6DDB82E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+HHSafe.m"; sourceTree = "<group>"; };
+		CAB6DDB92E2CEF8F0072ED9B /* NSNumber+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDBA2E2CEF8F0072ED9B /* NSNumber+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDBB2E2CEF8F0072ED9B /* NSObject+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDBC2E2CEF8F0072ED9B /* NSObject+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDBD2E2CEF8F0072ED9B /* NSString+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDBE2E2CEF8F0072ED9B /* NSString+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDBF2E2CEF8F0072ED9B /* UIImage+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDC02E2CEF8F0072ED9B /* UIImage+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDC12E2CEF8F0072ED9B /* UIView+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDC22E2CEF8F0072ED9B /* UIView+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDC32E2CEF8F0072ED9B /* UIView+HHArrange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HHArrange.h"; sourceTree = "<group>"; };
+		CAB6DDC42E2CEF8F0072ED9B /* UIView+HHArrange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHArrange.m"; sourceTree = "<group>"; };
+		CAB6DDC52E2CEF8F0072ED9B /* UIView+HHFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HHFrame.h"; sourceTree = "<group>"; };
+		CAB6DDC62E2CEF8F0072ED9B /* UIView+HHFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHFrame.m"; sourceTree = "<group>"; };
+		CAB6DDC72E2CEF8F0072ED9B /* UIView+HHLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HHLayout.h"; sourceTree = "<group>"; };
+		CAB6DDC82E2CEF8F0072ED9B /* UIView+HHLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHLayout.m"; sourceTree = "<group>"; };
+		CAB6DDC92E2CEF8F0072ED9B /* UIViewController+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDCA2E2CEF8F0072ED9B /* UIViewController+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HHAdd.m"; sourceTree = "<group>"; };
+		CAB6DDCB2E2CEF8F0072ED9B /* UIWindow+HHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+HHAdd.h"; sourceTree = "<group>"; };
+		CAB6DDCC2E2CEF8F0072ED9B /* UIWindow+HHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+HHAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +147,6 @@
 				5066DB9E281D633B00461CD1 /* AppDelegate.m */,
 				5066DBA3281D633B00461CD1 /* ViewController.h */,
 				5066DBA4281D633B00461CD1 /* ViewController.m */,
-				50355D37282DEAD5005E1B12 /* DemoTableViewController.h */,
-				50355D38282DEAD5005E1B12 /* DemoTableViewController.m */,
-				50355D3A282DEF57005E1B12 /* DemoTableViewCell.h */,
-				50355D3B282DEF57005E1B12 /* DemoTableViewCell.m */,
 				5066DBA6281D633B00461CD1 /* Main.storyboard */,
 				5066DBA9281D633E00461CD1 /* Assets.xcassets */,
 				5066DBAB281D633E00461CD1 /* LaunchScreen.storyboard */,
@@ -180,89 +159,66 @@
 		FEBB769F2838802B0062D595 /* HHCommon */ = {
 			isa = PBXGroup;
 			children = (
-				FEBB76A02838802B0062D595 /* Common */,
-				FEBB76C82838802B0062D595 /* Base */,
+				CAB6DD942E2CEF8F0072ED9B /* HHArrowLabel.h */,
+				CAB6DD952E2CEF8F0072ED9B /* HHArrowLabel.m */,
+				CAB6DD962E2CEF8F0072ED9B /* HHArrowView.h */,
+				CAB6DD972E2CEF8F0072ED9B /* HHArrowView.m */,
+				CAB6DD982E2CEF8F0072ED9B /* HHCommon.h */,
+				CAB6DD992E2CEF8F0072ED9B /* HHCommonMethod.h */,
+				CAB6DD9A2E2CEF8F0072ED9B /* HHCrashCaughtHandler.h */,
+				CAB6DD9B2E2CEF8F0072ED9B /* HHCrashCaughtHandler.m */,
+				CAB6DD9C2E2CEF8F0072ED9B /* HHDeallocMediumObject.h */,
+				CAB6DD9D2E2CEF8F0072ED9B /* HHDeallocMediumObject.m */,
+				CAB6DD9E2E2CEF8F0072ED9B /* HHDisableQuickClickButton.h */,
+				CAB6DD9F2E2CEF8F0072ED9B /* HHDisableQuickClickButton.m */,
+				CAB6DDA02E2CEF8F0072ED9B /* HHEnableInsetsLabel.h */,
+				CAB6DDA12E2CEF8F0072ED9B /* HHEnableInsetsLabel.m */,
+				CAB6DDA22E2CEF8F0072ED9B /* HHFileManager.h */,
+				CAB6DDA32E2CEF8F0072ED9B /* HHFileManager.m */,
+				CAB6DDA42E2CEF8F0072ED9B /* HHFormatUtil.h */,
+				CAB6DDA52E2CEF8F0072ED9B /* HHFormatUtil.m */,
+				CAB6DDA62E2CEF8F0072ED9B /* HHGradientLayerButton.h */,
+				CAB6DDA72E2CEF8F0072ED9B /* HHGradientLayerButton.m */,
+				CAB6DDA82E2CEF8F0072ED9B /* HHGradientLayerView.h */,
+				CAB6DDA92E2CEF8F0072ED9B /* HHGradientLayerView.m */,
+				CAB6DDAA2E2CEF8F0072ED9B /* HHMacro.h */,
+				CAB6DDAB2E2CEF8F0072ED9B /* HHSafeTimer.h */,
+				CAB6DDAC2E2CEF8F0072ED9B /* HHSafeTimer.m */,
+				CAB6DDAD2E2CEF8F0072ED9B /* HHUserDefaults.h */,
+				CAB6DDAE2E2CEF8F0072ED9B /* HHUserDefaults.m */,
+				CAB6DDAF2E2CEF8F0072ED9B /* NSArray+HHSafe.h */,
+				CAB6DDB02E2CEF8F0072ED9B /* NSArray+HHSafe.m */,
+				CAB6DDB12E2CEF8F0072ED9B /* NSDate+HHAdd.h */,
+				CAB6DDB22E2CEF8F0072ED9B /* NSDate+HHAdd.m */,
+				CAB6DDB32E2CEF8F0072ED9B /* NSDictionary+HHSafe.h */,
+				CAB6DDB42E2CEF8F0072ED9B /* NSDictionary+HHSafe.m */,
+				CAB6DDB52E2CEF8F0072ED9B /* NSMutableArray+HHSafe.h */,
+				CAB6DDB62E2CEF8F0072ED9B /* NSMutableArray+HHSafe.m */,
+				CAB6DDB72E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.h */,
+				CAB6DDB82E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.m */,
+				CAB6DDB92E2CEF8F0072ED9B /* NSNumber+HHAdd.h */,
+				CAB6DDBA2E2CEF8F0072ED9B /* NSNumber+HHAdd.m */,
+				CAB6DDBB2E2CEF8F0072ED9B /* NSObject+HHAdd.h */,
+				CAB6DDBC2E2CEF8F0072ED9B /* NSObject+HHAdd.m */,
+				CAB6DDBD2E2CEF8F0072ED9B /* NSString+HHAdd.h */,
+				CAB6DDBE2E2CEF8F0072ED9B /* NSString+HHAdd.m */,
+				CAB6DDBF2E2CEF8F0072ED9B /* UIImage+HHAdd.h */,
+				CAB6DDC02E2CEF8F0072ED9B /* UIImage+HHAdd.m */,
+				CAB6DDC12E2CEF8F0072ED9B /* UIView+HHAdd.h */,
+				CAB6DDC22E2CEF8F0072ED9B /* UIView+HHAdd.m */,
+				CAB6DDC32E2CEF8F0072ED9B /* UIView+HHArrange.h */,
+				CAB6DDC42E2CEF8F0072ED9B /* UIView+HHArrange.m */,
+				CAB6DDC52E2CEF8F0072ED9B /* UIView+HHFrame.h */,
+				CAB6DDC62E2CEF8F0072ED9B /* UIView+HHFrame.m */,
+				CAB6DDC72E2CEF8F0072ED9B /* UIView+HHLayout.h */,
+				CAB6DDC82E2CEF8F0072ED9B /* UIView+HHLayout.m */,
+				CAB6DDC92E2CEF8F0072ED9B /* UIViewController+HHAdd.h */,
+				CAB6DDCA2E2CEF8F0072ED9B /* UIViewController+HHAdd.m */,
+				CAB6DDCB2E2CEF8F0072ED9B /* UIWindow+HHAdd.h */,
+				CAB6DDCC2E2CEF8F0072ED9B /* UIWindow+HHAdd.m */,
 			);
 			path = HHCommon;
 			sourceTree = SOURCE_ROOT;
-		};
-		FEBB76A02838802B0062D595 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FEBB76B92838802B0062D595 /* HHMacro.h */,
-				FEBB76A72838802B0062D595 /* HHCommon.h */,
-				FEBB76BA2838802B0062D595 /* UIView+HHAdd.h */,
-				FEBB76AA2838802B0062D595 /* UIView+HHAdd.m */,
-				FEBB988B286005B40098ECD4 /* NSDate+HHAdd.h */,
-				FEBB988C286005B40098ECD4 /* NSDate+HHAdd.m */,
-				FEBB76A92838802B0062D595 /* UIView+HHFrame.h */,
-				FEBB76BC2838802B0062D595 /* UIView+HHFrame.m */,
-				FEBB76A82838802B0062D595 /* UIView+HHLayout.h */,
-				FEBB76BB2838802B0062D595 /* UIView+HHLayout.m */,
-				508E939A28C638AC00C560CF /* UIView+HHArrange.h */,
-				508E939928C638AC00C560CF /* UIView+HHArrange.m */,
-				FEBB76B62838802B0062D595 /* NSObject+HHAdd.h */,
-				FEBB76A42838802B0062D595 /* NSObject+HHAdd.m */,
-				FEBB76A32838802B0062D595 /* NSString+HHAdd.h */,
-				FEBB76B52838802B0062D595 /* NSString+HHAdd.m */,
-				FEBB76A52838802B0062D595 /* UIImage+HHAdd.h */,
-				FEBB76B42838802B0062D595 /* UIImage+HHAdd.m */,
-				FEBB76AD2838802B0062D595 /* NSArray+HHSafe.h */,
-				FEBB76C62838802B0062D595 /* NSArray+HHSafe.m */,
-				FEBB76BE2838802B0062D595 /* NSNumber+HHAdd.h */,
-				FEBB76AB2838802B0062D595 /* NSNumber+HHAdd.m */,
-				FEBB76A62838802B0062D595 /* NSDictionary+HHSafe.h */,
-				FEBB76BD2838802B0062D595 /* NSDictionary+HHSafe.m */,
-				FEBB76AF2838802B0062D595 /* NSMutableArray+HHSafe.h */,
-				FEBB76C42838802B0062D595 /* NSMutableArray+HHSafe.m */,
-				FEBB76B22838802B0062D595 /* NSMutableDictionary+HHSafe.h */,
-				FEBB76C02838802B0062D595 /* NSMutableDictionary+HHSafe.m */,
-				FEBB76A12838802B0062D595 /* HHDisableQuickClickButton.h */,
-				FEBB76B82838802B0062D595 /* HHDisableQuickClickButton.m */,
-				FE0678F1287FB93A0041E6F5 /* HHDeallocMediumObject.h */,
-				FE0678F2287FB93A0041E6F5 /* HHDeallocMediumObject.m */,
-				FEBB76AE2838802B0062D595 /* HHCrashCaughtHandler.h */,
-				FEBB76C32838802B0062D595 /* HHCrashCaughtHandler.m */,
-				FE662F7028446BE50030FFA2 /* HHGradientLayerButton.h */,
-				FE662F7128446BE50030FFA2 /* HHGradientLayerButton.m */,
-				FEBB76A22838802B0062D595 /* HHGradientLayerView.h */,
-				FEBB76B72838802B0062D595 /* HHGradientLayerView.m */,
-				FEBB76B32838802B0062D595 /* HHEnableInsetsLabel.h */,
-				FEBB76BF2838802B0062D595 /* HHEnableInsetsLabel.m */,
-				FEBB76C52838802B0062D595 /* HHCommonMethod.h */,
-				FEBB76C12838802B0062D595 /* HHUserDefaults.h */,
-				FEBB76B02838802B0062D595 /* HHUserDefaults.m */,
-				FEBB76AC2838802B0062D595 /* HHFileManager.h */,
-				FEBB76C72838802B0062D595 /* HHFileManager.m */,
-				FEBB76C22838802B0062D595 /* HHSafeTimer.h */,
-				FEBB76B12838802B0062D595 /* HHSafeTimer.m */,
-				FE85EAF02C3B917F00C8EF51 /* HHArrowLabel.h */,
-				FE85EAF12C3B917F00C8EF51 /* HHArrowLabel.m */,
-				FEE81DC828E5358900C0F768 /* HHArrowView.h */,
-				FEE81DC928E5358900C0F768 /* HHArrowView.m */,
-				FE34C5932A9D80C100B5B0D7 /* HHButton.h */,
-				FE34C5942A9D80C100B5B0D7 /* HHButton.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		FEBB76C82838802B0062D595 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				FEBB76CD2838802B0062D595 /* HHBaseNavigationController.h */,
-				FEBB76D22838802B0062D595 /* HHBaseNavigationController.m */,
-				FEBB76CF2838802B0062D595 /* HHBaseTableViewController.h */,
-				FEBB76C92838802B0062D595 /* HHBaseTableViewController.m */,
-				FEBB76CA2838802B0062D595 /* HHBaseTableViewCellModel.h */,
-				FEBB76D12838802B0062D595 /* HHBaseTableViewCellModel.m */,
-				FEBB76D02838802B0062D595 /* HHBaseViewController.h */,
-				FEBB76CB2838802B0062D595 /* HHBaseViewController.m */,
-				FEBB76D32838802B0062D595 /* HHBaseTableViewCell.h */,
-				FEBB76CC2838802B0062D595 /* HHBaseTableViewCell.m */,
-				FEBB76CE2838802B0062D595 /* BaseBundle.bundle */,
-			);
-			path = Base;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -323,7 +279,6 @@
 			files = (
 				5066DBAD281D633E00461CD1 /* LaunchScreen.storyboard in Resources */,
 				5066DBAA281D633E00461CD1 /* Assets.xcassets in Resources */,
-				FEBB76E92838802B0062D595 /* BaseBundle.bundle in Resources */,
 				5066DBA8281D633B00461CD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,41 +290,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50355D3C282DEF57005E1B12 /* DemoTableViewCell.m in Sources */,
-				508E939B28C638AD00C560CF /* UIView+HHArrange.m in Sources */,
-				FEBB76D62838802B0062D595 /* NSNumber+HHAdd.m in Sources */,
-				FE0678F3287FB93A0041E6F5 /* HHDeallocMediumObject.m in Sources */,
-				FEBB76DD2838802B0062D595 /* UIView+HHLayout.m in Sources */,
-				FEBB76D82838802B0062D595 /* HHSafeTimer.m in Sources */,
-				FEBB988D286005B40098ECD4 /* NSDate+HHAdd.m in Sources */,
-				FEBB76DB2838802B0062D595 /* HHGradientLayerView.m in Sources */,
-				FEBB76D42838802B0062D595 /* NSObject+HHAdd.m in Sources */,
-				FEBB76DF2838802B0062D595 /* NSDictionary+HHSafe.m in Sources */,
-				FEBB76D72838802B0062D595 /* HHUserDefaults.m in Sources */,
-				FEBB76E82838802B0062D595 /* HHBaseTableViewCell.m in Sources */,
-				FEBB76E62838802B0062D595 /* HHBaseTableViewController.m in Sources */,
-				FEBB76E22838802B0062D595 /* HHCrashCaughtHandler.m in Sources */,
+				CAB6DDCD2E2CEF8F0072ED9B /* UIView+HHLayout.m in Sources */,
+				CAB6DDCE2E2CEF8F0072ED9B /* HHGradientLayerView.m in Sources */,
+				CAB6DDCF2E2CEF8F0072ED9B /* UIImage+HHAdd.m in Sources */,
+				CAB6DDD02E2CEF8F0072ED9B /* NSObject+HHAdd.m in Sources */,
+				CAB6DDD12E2CEF8F0072ED9B /* UIView+HHArrange.m in Sources */,
+				CAB6DDD22E2CEF8F0072ED9B /* HHGradientLayerButton.m in Sources */,
+				CAB6DDD32E2CEF8F0072ED9B /* HHArrowView.m in Sources */,
+				CAB6DDD42E2CEF8F0072ED9B /* HHSafeTimer.m in Sources */,
+				CAB6DDD52E2CEF8F0072ED9B /* NSDate+HHAdd.m in Sources */,
+				CAB6DDD62E2CEF8F0072ED9B /* HHFormatUtil.m in Sources */,
+				CAB6DDD72E2CEF8F0072ED9B /* NSMutableArray+HHSafe.m in Sources */,
+				CAB6DDD82E2CEF8F0072ED9B /* HHDeallocMediumObject.m in Sources */,
+				CAB6DDD92E2CEF8F0072ED9B /* NSMutableDictionary+HHSafe.m in Sources */,
+				CAB6DDDA2E2CEF8F0072ED9B /* HHFileManager.m in Sources */,
+				CAB6DDDB2E2CEF8F0072ED9B /* HHArrowLabel.m in Sources */,
+				CAB6DDDC2E2CEF8F0072ED9B /* HHDisableQuickClickButton.m in Sources */,
+				CAB6DDDD2E2CEF8F0072ED9B /* NSArray+HHSafe.m in Sources */,
+				CAB6DDDE2E2CEF8F0072ED9B /* HHEnableInsetsLabel.m in Sources */,
+				CAB6DDDF2E2CEF8F0072ED9B /* UIView+HHAdd.m in Sources */,
+				CAB6DDE02E2CEF8F0072ED9B /* UIWindow+HHAdd.m in Sources */,
+				CAB6DDE12E2CEF8F0072ED9B /* NSNumber+HHAdd.m in Sources */,
+				CAB6DDE22E2CEF8F0072ED9B /* HHUserDefaults.m in Sources */,
+				CAB6DDE32E2CEF8F0072ED9B /* HHCrashCaughtHandler.m in Sources */,
+				CAB6DDE42E2CEF8F0072ED9B /* UIViewController+HHAdd.m in Sources */,
+				CAB6DDE52E2CEF8F0072ED9B /* NSDictionary+HHSafe.m in Sources */,
+				CAB6DDE62E2CEF8F0072ED9B /* UIView+HHFrame.m in Sources */,
+				CAB6DDE72E2CEF8F0072ED9B /* NSString+HHAdd.m in Sources */,
 				5066DBA5281D633B00461CD1 /* ViewController.m in Sources */,
 				5066DB9F281D633B00461CD1 /* AppDelegate.m in Sources */,
-				FEBB76E52838802B0062D595 /* HHFileManager.m in Sources */,
 				5066DBB0281D633E00461CD1 /* main.m in Sources */,
-				FEBB76DE2838802B0062D595 /* UIView+HHFrame.m in Sources */,
-				FEBB76DC2838802B0062D595 /* HHDisableQuickClickButton.m in Sources */,
-				50355D39282DEAD5005E1B12 /* DemoTableViewController.m in Sources */,
-				FEBB76E32838802B0062D595 /* NSMutableArray+HHSafe.m in Sources */,
-				FEBB76D92838802B0062D595 /* UIImage+HHAdd.m in Sources */,
-				FEBB76D52838802B0062D595 /* UIView+HHAdd.m in Sources */,
-				FEBB76E72838802B0062D595 /* HHBaseViewController.m in Sources */,
-				FEBB76EB2838802B0062D595 /* HHBaseNavigationController.m in Sources */,
-				FEBB76EA2838802B0062D595 /* HHBaseTableViewCellModel.m in Sources */,
-				FE34C5952A9D80C100B5B0D7 /* HHButton.m in Sources */,
-				FE85EAF22C3B917F00C8EF51 /* HHArrowLabel.m in Sources */,
-				FEBB76E12838802B0062D595 /* NSMutableDictionary+HHSafe.m in Sources */,
-				FE662F7228446BE50030FFA2 /* HHGradientLayerButton.m in Sources */,
-				FEE81DCA28E5358900C0F768 /* HHArrowView.m in Sources */,
-				FEBB76DA2838802B0062D595 /* NSString+HHAdd.m in Sources */,
-				FEBB76E02838802B0062D595 /* HHEnableInsetsLabel.m in Sources */,
-				FEBB76E42838802B0062D595 /* NSArray+HHSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +472,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,7 +500,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

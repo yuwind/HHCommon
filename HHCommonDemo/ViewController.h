@@ -5,10 +5,9 @@
 //  Created by yufeng on 2022/4/30.
 //
 
-#import "HHBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ViewController : HHBaseViewController
-
+@interface ViewController : UIViewController
 
 @end
 
